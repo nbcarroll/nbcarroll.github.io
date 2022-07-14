@@ -1,11 +1,11 @@
 title: Nick Carroll # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
+logo: "https://avatars.githubusercontent.com/u/5028048?s=400&u=7580223635e88afa5ec411e42e0ff49bbaadbae9&v=4" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Pardon the dust... 
   <br><br>
-  Second description 
+  ... it will be gone soon!
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="http://linkedin.com/nick-carroll1">View My LinkedIn Profile</a> 
   
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

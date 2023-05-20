@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
+[Bandcamp Merchandise Revenue Creating New Revenue Streams](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---

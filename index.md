@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Bandcamp Merchandise Revenue Creating New Revenue Streams](/bandcamp)
+[Bandcamp Merchandise Revenue Creating New Revenue Streams](/bandcamp.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---

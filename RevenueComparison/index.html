@@ -54,7 +54,19 @@ function Merch_Cat_Bar_Chart() {
     // Create a viz object and embed it in the container div.
         }
 
+function CategoriesComparison() {
+    var containerDiv_2 = document.getElementById("vizContainer_CategoriesComparison"),
+        url = "https://public.tableau.com/views/BandcampCategoriesComparison/Dashboard15?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+        options = {
+            hideTabs: true,
+            onFirstInteractive: function () {
+                console.log("Run this code when the viz has finished loading.");
+            }
+        };
 
+    var viz = new tableau.Viz(containerDiv_2, url, options);
+    // Create a viz object and embed it in the container div.
+        }
 
 
 
@@ -69,13 +81,16 @@ function Merch_Cat_Bar_Chart() {
 
 <h3>How Has This Data Been Processed?</h3>
 
-<p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future.</p>
+    <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future.</p>
 
     <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Data Source</a> | 
-    <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">Jupyter Notebook</a></p></strong>
+    <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">Jupyter Notebook</a></p>
+    </strong>
 
 <h2>Bandcamp has evolved into a comprehensive marketplace for not only music, but also merchandise.</h2>
-<!--- Visual Here -->
+
+<div id="vizContainer_CategoriesComparison" style="width:1000px; height:700px;"></div>
+
 Despite the fact that only 4.96% of vendors (artists/labels) on the platform sell merchandise, this revenue stream has proven to be incredibly lucrative. In fact, in just the 24 days studied, <b>merchandise sales accounted for approximately 11% of Bandcamp's revenue</b>, amounting to over a million dollars.
 
 <h2>While There Are Many Different Merchandise categories, T-Shirts are the most popular.</h2>
@@ -84,6 +99,11 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     <div id="vizContainer_Merch_Cat_Bar_Chart" style="width:1000px; height:400px;"></div>
 
 This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.
+
+**Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.**
+
+Among those who sold t-shirts, two generated more revenue than anyone else: the French Techno Label **SAIKE** + the Australian Rock Band **King Gizzard & The Lizard Wizard**. After these two outliers were removed, there is an other group of artists that called High Revenue Artists/Labels which produced some interesting insights.
+
 
     <div id="vizContainer_2" style="width:1000px; height:150px;"></div>
 	<br>
@@ -95,42 +115,3 @@ This figure does not account for bundle deals, where musical releases are solid 
 </html>
 
 
-
-
-
-
-
-
-
-<!--
-<html>
-<head>
-
-    <!-- <title>TITLE </title>
-
-    <script type="text/javascript"
-	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script type="text/javascript"></script>
-
-</head>
-
-<body>
-
-  <<h1>Bandcamp Project</h1> 
-
- <button id = "exportPDF">Generate PDF</button>
-    <button id = "exportImage">Generate Image</button> 
-
-
-    <div id="vizContainer"></div>
-
-    <script src="./RevenueComparison.js"></script>
-	
-Creating a 2nd Viz Container 
-    <div id="vizContainer"></div>
-    <script src="./PriceRevenueComparison.js"></script>
-
-</body>
-
-</html>
---->

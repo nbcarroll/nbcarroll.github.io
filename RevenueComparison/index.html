@@ -6,42 +6,56 @@
 <html>
 
 <head>
-    <title>Basic Embed</title>
+    <title>Bandcamp: More Than a Music Store</title>
 
     <script type="text/javascript"
 	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script type="text/javascript">
-        function initViz() {
-            var containerDiv = document.getElementById("vizContainer"),
-                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenuevs_ShirtPriceComparison/52023S3_V5T-ShirtRevenueDistribution?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
 
-            var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
-        }
-	    
- function initViz_2() {
-            var containerDiv_2 = document.getElementById("vizContainer_2"),
-                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenueComparison/Dashboard12?:language=en-US&:display_count=n&:origin=viz_share_link",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
+function initViz() {
+    var containerDiv = document.getElementById("vizContainer"),
+        url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenuevs_ShirtPriceComparison/52023S3_V5T-ShirtRevenueDistribution?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+        options = {
+            hideTabs: true,
+            onFirstInteractive: function () {
+                console.log("Run this code when the viz has finished loading.");
+            }
+        };
 
-            var viz = new tableau.Viz(containerDiv_2, url, options);
-            // Create a viz object and embed it in the container div.
+    var viz = new tableau.Viz(containerDiv, url, options);
+    // Create a viz object and embed it in the container div.
+}
+
+function initViz_2() {
+    var containerDiv_2 = document.getElementById("vizContainer_2"),
+        url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenueComparison/Dashboard12?:language=en-US&:display_count=n&:origin=viz_share_link",
+        options = {
+            hideTabs: true,
+            onFirstInteractive: function () {
+                console.log("Run this code when the viz has finished loading.");
+            }
+        };
+
+    var viz = new tableau.Viz(containerDiv_2, url, options);
+    // Create a viz object and embed it in the container div.
         }
     </script>
 </head>
 
 <body onload="initViz(); initViz_2()">
+
+    <h3><strong>What Data is Used in this Analysis?</strong></h3>
+
+<p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020.</p>
+
+<h3>How Has This Data Been Processed?</h3>
+
+<p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future. The Jupyter Notebook is linked below.</p>
+
+<p><strong>
+    <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Data Source</a> | 
+    <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">Jupyter Notebook</a></p></strong>
+
     <div id="vizContainer_2" style="width:1000px; height:150px;"></div>
 	<br>
 	More text goes here.

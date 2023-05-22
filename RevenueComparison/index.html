@@ -1,7 +1,68 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Embed</title>
+
+    <script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenuevs_ShirtPriceComparison/52023S3_V5T-ShirtRevenueDistribution?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+	    
+ function initViz_2() {
+            var containerDiv = document.getElementById("vizContainer_2"),
+                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenueComparison/Dashboard12?:language=en-US&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px;"></div>
+
+<body onload="initViz_2();">
+    <div id="vizContainer_2" style="width:800px; height:700px;"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--
 <html>
 <head>
 
-    <!-- <title>TITLE </title> -->
+    <!-- <title>TITLE </title>
 
     <script type="text/javascript"
 	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
@@ -13,18 +74,19 @@
 
   <<h1>Bandcamp Project</h1> 
 
-     <!-- <button id = "exportPDF">Generate PDF</button>
-    <button id = "exportImage">Generate Image</button> -->
+ <button id = "exportPDF">Generate PDF</button>
+    <button id = "exportImage">Generate Image</button> 
 
 
     <div id="vizContainer"></div>
 
     <script src="./RevenueComparison.js"></script>
 	
-<!--- Creating a 2nd Viz Container --->
+Creating a 2nd Viz Container 
     <div id="vizContainer"></div>
     <script src="./PriceRevenueComparison.js"></script>
 
 </body>
 
 </html>
+--->

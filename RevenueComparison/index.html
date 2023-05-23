@@ -642,49 +642,49 @@
 
 <body onload="initViz(); initViz_2(); Merch_Cat_Bar_Chart(); CategoriesComparison()">
 <h1> Introduction</h1>
+    <p>
+    Although Bandcamp was initially established as another platform for artists and record labels to digitally release music, it has become something much more.</p>
 
-    Although Bandcamp was initially established as another platform for artists and record labels to digitally release music, it has become something much more.
-    <br><br>
-    During the COVID-19 Pandemic, the platform provided a lifeline for many “vendors”, a term I’ll use to encompass independent artists and non-major label record labels. The steps taken by Bandcamp to directly support artists, such as waiving fees, hosting fee-waive days, and establishing the COVID-19 Artist Fund, demonstrated a commitment to the well-being of musicians and creators during a difficult time, leading to a positive reputation for the platform. These actions resonated with artists and fans alike, as they not only provided artists with a means to generate income but also allowed fans to directly support their favorite musicians.
-    <br><br>
-    Moreover, Bandcamp has expanded its scope beyond music sales and has become a platform where many vendors now offer merchandise alongside their music. This presents a significant opportunity for Bandcamp to capitalize on.
-    <br><br>
-    In this project, I aim to explore this opportunity, which has the potential to create a new revenue stream, foster the creation of additional merchandise, and reduce the financial risk for vendors. Furthermore, embracing this opportunity can save vendors countless hours of administrative work, allowing them to focus more on their creative endeavors.
+    <p>During the COVID-19 Pandemic, the platform provided a lifeline for many “vendors”, a term I’ll use to encompass independent artists and non-major label record labels. The steps taken by Bandcamp to directly support vendors, such as waiving fees, hosting fee-waive days, and establishing the COVID-19 Artist Fund, demonstrated a commitment to the well-being of theses musicians and non-major record labels during a difficult time, leading to a positive reputation for the platform. These actions resonated with artists and fans alike, as they not only provided artists with a means to generate income but also allowed fans to directly support their favorite musicians.</p>
+
+    <p>Moreover, Bandcamp has expanded its scope beyond music sales and has become a platform where many vendors now offer merchandise alongside their music. This is where it seems there is a significant opportunity for Bandcamp to capitalize on.</p>
+
+    <p>In this project, I aim to explore this opportunity, which has the potential to create a new revenue stream, foster the creation of additional merchandise, and reduce the financial risk for vendors. Furthermore, embracing this opportunity can save vendors countless hours of administrative work, allowing them to focus more on their creative endeavors.</p>
 
     <h3><strong>What Data is Used in this Analysis?</strong></h3>
 
-<p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020.</p>
+<p>One Million Transactions were recorded on the platform over a span of 24 days, from September 9th, 2020 to October 2nd, 2020. This dataset is publicly available on <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
 
-<h3>How Has This Data Been Processed?</h3>
+    <h3><strong>How Has This Data Been Processed?</strong></h3>
+        <p>The Jupyter Notebook</a> file can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here.</a></p>
+        
+        <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future.</p>
 
-    <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future.</p>
-
-    <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Data Source</a> | 
-    <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">Jupyter Notebook</a></p>
-    </strong>
+</p>
+        </strong>
 
 <h2>Bandcamp has evolved into a comprehensive marketplace for not only music, but also merchandise.</h2>
 
-    Despite the fact that only 4.96% of vendors (artists/labels) on the platform sell merchandise, this revenue stream has proven to be incredibly lucrative. In fact, in just the 24 days studied, <b>merchandise sales accounted for approximately 11% of Bandcamp's revenue</b>, amounting to over a million dollars.
+    <p>Despite only 4.96% of vendors (artists/labels) on the platform selling merchandise, this revenue stream has proven to be incredibly lucrative. In fact, in just the 24 days studied, <b>merchandise sales accounted for approximately 11% of Bandcamp's revenue</b>, amounting to over a million dollars.</p
 
     <div id="vizContainer_CategoriesComparison" style="width:1000px; height:800px;"></div>
 
 
-<h2>While There Are Many Different Merchandise categories, T-Shirts are the most popular.</h2>
+<h2>While there are many different forms of merchandise sold, T-Shirts are the most popular.</h2>
 There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
     <div id="vizContainer_Merch_Cat_Bar_Chart" style="width:1000px; height:300px;"></div>
 
-This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.
+    <p>This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.</p>
 
 <h2>Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.</h2>
 
-Among those who sold t-shirts, two generated more revenue than anyone else: the French Techno Label SAIKE + the Australian Rock Band King Gizzard & The Lizard Wizard.<br>
+    <p>Among those who sold t-shirts, two generated more revenue than anyone else: the French Techno Label SAIKE + the Australian Rock Band King Gizzard & The Lizard Wizard.<br></p>
 
 
     <div id="vizContainer_2" style="width:1000px; height:150px;"></div>
 	<br>
-	After these two vendors were removed, a second cluster of vendors emerged. This cluster of a dozen vendors which includes artists such as Boy Harsher, Chromeo & Avalon Emerson and labels such as RuptureLDN, generated at least approximately $1,600 in revenue. Among these vendors, the median t-shirt price is $26. Among other vendors, the median t-shirt price was only $18.
+	<p>After these two vendors were removed, a second cluster of vendors emerged. This cluster of a dozen vendors which includes artists such as Boy Harsher, Chromeo & Avalon Emerson and labels such as RuptureLDN, generated at least approximately $1,600 in revenue. Among these vendors, the median t-shirt price is $26. Among other vendors, the median t-shirt price was only $18.</p>
 
     <div id="vizContainer" style="width:1000px; height:825px;"></div>
 <br>
@@ -694,35 +694,35 @@ Among those who sold t-shirts, two generated more revenue than anyone else: the 
     
 <h2>By either purchasing an enterprise solution or acquiring a "Print-on-Demand" Company, Bandcamp will be able to leverage its large vendor base of artists & record labels to offer competitive merchandise rates relative to wholesale providers.</h2>
 
-    This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.
+    <p>This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.</p>
     
     <h3>1. Taking a % of the Reduced Merchandising Production Costs From the Enterprise Solution Implementation as Revenue</h3>
 
-    For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of  Bandcamp's primary merchandise producer, they still have the option to do so.
-    <br><br>
-    Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.
+    <p>For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of  Bandcamp's primary merchandise producer, they still have the option to do so.</p>
+ 
+    <p>Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.</p>
 
     <h3>2. Increased Sales of Existing or Sold Out Products</h3>
     
-    For example, a vendor may have an existing product that is sold out but wishes to sell more of it but is concerned about just how many of that new item they may sell. "Print-to-Order" Merchandising would allow them to do so. If a vendor chooses to set a limit on the number of a certain item to create a "limited release", they still have the option to do so.
+    <p>For example, a vendor may have an existing product that is sold out but wishes to sell more of it but is concerned about just how many of that new item they may sell. "Print-to-Order" Merchandising would allow them to do so. If a vendor chooses to set a limit on the number of a certain item to create a "limited release", they still have the option to do so.</p>
 
     <h3>3. Encourages Vendors to Create New Products due to Less Risk + No Upfront Costs</h3>
 
-    The reduced risk associated encourages artists and record labels to experiment with merchandise. Bandcamp possesses a wealth of data and can use an artist's fanbase and musical tags to recommend additional merchandise lines based on what similar artists are selling. In addition to the potential revenue streams, creating an integrated system provides additional incentives for vendors to move all their merchandising operations to Bandcamp.
+    <p>The reduced risk associated encourages artists and record labels to experiment with merchandise. Bandcamp possesses a wealth of data and can use an artist's fanbase and musical tags to recommend additional merchandise lines based on what similar artists are selling. In addition to the potential revenue streams, creating an integrated system provides additional incentives for vendors to move all their merchandising operations to Bandcamp.</p>
 
     <h2>What are some additional Vendor benefits?</h2>
     <h3>1. No Risk or Upfront Costs</h3>
 
-    Unlike traditional wholesale merchandising, there are no upfront costs involved. Additionally, if vendors choose to bulk order, they can receive even greater discounts. If vendors feel confident, they can move a minimum number of units, they can choose to order them and handle the merchandise shipping themselves, as currently done on Bandcamp. It is among vendors who have the confidence to take on these order volumes upfront that the cost per unit becomes much more competitive with traditional wholesale purchasing.
+    <p>Unlike traditional wholesale merchandising, there are no upfront costs involved. Additionally, if vendors choose to bulk order, they can receive even greater discounts. If vendors feel confident, they can move a minimum number of units, they can choose to order them and handle the merchandise shipping themselves, as currently done on Bandcamp. It is among vendors who have the confidence to take on these order volumes upfront that the cost per unit becomes much more competitive with traditional wholesale purchasing.</p>
 
     <h3>2. Reduced Administrative Costs and Time Spent</h3>
-    There is no requirement for a place to store merchandise or to worry about inventory management. Time-wise, this model frees up artists and labels from spending the time physically packaging and mailing items. 
+    <p>There is no requirement for a place to store merchandise or to worry about inventory management. Time-wise, this model frees up artists and labels from spending the time physically packaging and mailing items.</p>
   
     <h3>3. Providing Tailored Business Recommandations</h3>
-    This will take time to fully develop but I can see their being major benefits for smaller and up-and-coming artists. For example, an artist may be uncertain about how much merchandise to produce for an upcoming tour, but with the help of Bandcamp's recommendations, they can better estimate the demand and avoid under- or over-production. Even if the artist sells out of merchandise during the tour, fans can still purchase discounted items that will be shipped directly to their homes. Moreover, the platform has the potential to recommend optimal touring routes and destinations based on travel costs and fan geographic data. Overall, the platform's business recommendations could help level the playing field for smaller artists and labels, and make it easier for them to navigate the complex world of music business.
+    <p>This will take time to fully develop but I can see their being major benefits for smaller and up-and-coming artists. For example, an artist may be uncertain about how much merchandise to produce for an upcoming tour, but with the help of Bandcamp's recommendations, they can better estimate the demand and avoid under- or over-production. Even if the artist sells out of merchandise during the tour, fans can still purchase discounted items that will be shipped directly to their homes. Moreover, the platform has the potential to recommend optimal touring routes and destinations based on travel costs and fan geographic data. Overall, the platform's business recommendations could help level the playing field for smaller artists and labels, and make it easier for them to navigate the complex world of music business.</p>
 
     <h2>How would this implementation happen?</h2>
-    In terms of the adoption of such a system, fortunately many Print-On-Demand Services have API’s such as Printful and Gelato, to ensure a more seamless integration. 
+    <p>In terms of the adoption of such a system, fortunately many Print-On-Demand Services have API’s such as Printful and Gelato, to ensure a more seamless integration.</p>
 </body>
 
 </html>

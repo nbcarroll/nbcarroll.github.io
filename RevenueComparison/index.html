@@ -607,20 +607,6 @@
             // Create a viz object and embed it in the container div.
                 }
 
-        function Merch_Cat_Bar_Chart() {
-            var containerDiv_2 = document.getElementById("vizContainer_Merch_Cat_Bar_Chart"),
-                url = "https://public.tableau.com/views/BandcampMerchandiseCategoriesComparison/Dashboard14?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
-
-            var viz = new tableau.Viz(containerDiv_2, url, options);
-            // Create a viz object and embed it in the container div.
-                }
-
         function CategoriesComparison() {
             var containerDiv_2 = document.getElementById("vizContainer_CategoriesComparison"),
                 url = "https://public.tableau.com/views/BandcampCategoriesComparison/Dashboard15?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
@@ -635,6 +621,19 @@
             // Create a viz object and embed it in the container div.
                 }
 
+        function Merch_Cat_Bar_Chart() {
+            var containerDiv_2 = document.getElementById("vizContainer_Merch_Cat_Bar_Chart"),
+                url = "https://public.tableau.com/views/BandcampMerchandiseCategoriesComparison/Dashboard14?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv_2, url, options);
+            // Create a viz object and embed it in the container div.
+                }
 
 
     </script>

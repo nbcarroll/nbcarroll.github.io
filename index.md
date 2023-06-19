@@ -5,7 +5,7 @@
 ### Category Name 1 
 
 [Bandcamp Merchandise Revenue Creating New Revenue Streams](https://nbcarroll.github.io/RevenueComparison/index.html)
-<img src="images/github_project_thumbnail_bandcamp?raw=true"/>
+<img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)

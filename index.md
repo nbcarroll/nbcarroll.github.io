@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Bandcamp Merchandise Revenue Creating New Revenue Streams](https://nbcarroll.github.io/RevenueComparison/index.html)
+[Exploring the Merchandising Opportunity on Bandcamp: Enhancing Revenue, Reducing Risk, and Empowering Vendors](https://nbcarroll.github.io/RevenueComparison/index.html)
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ---

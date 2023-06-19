@@ -2,10 +2,10 @@
 
 ---
 
-### Category Name 1 
+<!-- ### Category Name 1  -->
 
-[Bandcamp Merchandise Revenue Creating New Revenue Streams](https://nbcarroll.github.io/RevenueComparison/index.html)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Exploring the Merchandising Opportunity on Bandcamp: Enhancing Revenue, Reducing Risk, and Empowering Vendors](https://nbcarroll.github.io/RevenueComparison/index.html)
+<img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
@@ -17,19 +17,8 @@
 
 ---
 
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
-
 ---
-
-
-
-
----
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
+<!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
+
+<!-- If I want to later have different project sections just use varying # for Markdown -->

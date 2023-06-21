@@ -17,7 +17,7 @@
 
 ---
 
-Personal Projects
+### Personal Projects
 #### [Research (Event Series)](https://researchseattle.com/)
 #### [Design Portfolio](https://nbcdesign.tumblr.com/)
 #### [secondnature](https://secondnatureseattle.com)

@@ -5,7 +5,7 @@
 <!-- ### Category Name 1  -->
 
 ## [Exploring Merchandising Opportunities on Bandcamp](https://nbcarroll.github.io/RevenueComparison/index.html)
-Enhancing Revenue, Reducing Risk, and Empowering Vendors <br>
+<i>Enhancing Revenue, Reducing Risk, and Empowering Vendors</i>
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ---

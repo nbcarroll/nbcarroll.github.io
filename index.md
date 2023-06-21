@@ -4,7 +4,8 @@
 
 <!-- ### Category Name 1  -->
 
-[Exploring the Merchandising Opportunity on Bandcamp: Enhancing Revenue, Reducing Risk, and Empowering Vendors](https://nbcarroll.github.io/RevenueComparison/index.html)
+## [Exploring Merchandising Opportunities on Bandcamp](https://nbcarroll.github.io/RevenueComparison/index.html)
+Enhancing Revenue, Reducing Risk, and Empowering Vendors <br>
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ---
@@ -12,7 +13,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Additional Projects](https://github.com/nbcarroll/Projects)
+## [Additional Projects](https://github.com/nbcarroll/Projects)
 
 ---
 <!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>

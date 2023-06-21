@@ -16,6 +16,12 @@ Enhancing Revenue, Reducing Risk, and Empowering Vendors <br>
 ## [Additional Projects](https://github.com/nbcarroll/Projects)
 
 ---
+
+Personal Projects
+#### [Research (Event Series)](https://researchseattle.com/)
+#### [Design Portfolio](https://nbcdesign.tumblr.com/)
+#### [secondnature](https://secondnatureseattle.com)
+
 <!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
 

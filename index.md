@@ -8,7 +8,7 @@
 <i>Enhancing Revenue, Reducing Risk, and Empowering Vendors</i>
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
-## [Road Expansion](https://nbcarroll.github.io/RevenueComparison/index.html)
+## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
 <i>Factors Impacting Home Valuation Regression Analysis</i>
 
 ## [Academic Projects]([https://github.com/nbcarroll/Projects#academic-projects](https://nbcarroll.github.io/SpringbankDrive/index.html))

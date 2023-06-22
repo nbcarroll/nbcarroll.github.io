@@ -573,7 +573,17 @@
             }
         }
 
+
+    .tools-box {
+      border: 1px solid #ccc;
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
     </style>
+
+</head>
+
 
     <script type="text/javascript"
 	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
@@ -640,29 +650,15 @@
 </head>
 
 <body onload="CategoriesComparison(); initViz(); initViz_2(); Merch_Cat_Bar_Chart()">
+
+ <body>
+   <h1>Exploring Merchandising Opportunities on Bandcamp Enhancing Revenue, Reducing Risk, and Empowering Vendors</h1>
+
+  <div class="tools-box">
+    <strong>Tools used:</strong> Python, Tableau
+  </div>
+	  
 <h1> Introduction</h1>
-    <p>
-    Although Bandcamp was initially established as another platform for artists and record labels to digitally release music, it has become something much more.</p>
-
-    <p>During the COVID-19 Pandemic, the platform provided a lifeline for many “vendors”, a term I’ll use to encompass independent artists and non-major label record labels. The steps taken by Bandcamp to directly support vendors, such as waiving fees, hosting fee-waive days, and establishing the COVID-19 Artist Fund, demonstrated a commitment to the well-being of theses musicians and non-major record labels during a difficult time, leading to a positive reputation for the platform. These actions resonated with artists and fans alike, as they not only provided artists with a means to generate income but also allowed fans to directly support their favorite musicians.</p>
-
-    <p>Moreover, Bandcamp has expanded its scope beyond music sales and has become a platform where many vendors now offer merchandise alongside their music. This is where it seems there is a significant opportunity for Bandcamp to capitalize on.</p>
-
-    <p>In this project, I aim to explore this opportunity, which has the potential to create a new revenue stream, foster the creation of additional merchandise, and reduce the financial risk for vendors. Furthermore, embracing this opportunity can save vendors countless hours of administrative work, allowing them to focus more on their creative endeavors.</p>
-
-    <h3><strong>What Data is Used in this Analysis?</strong></h3>
-
-<p>One Million Transactions were recorded on the platform over a span of 24 days, from September 9th, 2020 to October 2nd, 2020. This dataset is publicly available on <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
-
-    <h3><strong>How Has This Data Been Processed?</strong></h3>
-        <p>The Jupyter Notebook</a> file can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here.</a></p>
-        
-        <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future.</p>
-
-</p>
-        </strong>
-
-<h2>Bandcamp has evolved into a comprehensive marketplace for not only music, but also merchandise.</h2>
 
     <p>Despite only 4.96% of vendors (artists/labels) on the platform selling merchandise, this revenue stream has proven to be incredibly lucrative. In fact, in just the 24 days studied, <b>merchandise sales accounted for approximately 11% of Bandcamp's revenue</b>, amounting to over a million dollars.</p
 
@@ -672,37 +668,37 @@
 <h2>While there are many different forms of merchandise sold, T-Shirts are the most popular.</h2>
 There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
-    <div id="vizContainer_Merch_Cat_Bar_Chart" style="width:1000px; height:300px;"></div>
+<div id="vizContainer_Merch_Cat_Bar_Chart" style="width:1000px; height:300px;"></div>
 
-    <p>This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.</p>
+<p>This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.</p>
 
 <h2>Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.</h2>
 
-    <p>Among those who sold t-shirts, two generated more revenue than anyone else: the French Techno Label SAIKE + the Australian Rock Band King Gizzard & The Lizard Wizard.<br></p>
+<p>Among those who sold t-shirts, two generated more revenue than anyone else: the French Techno Label SAIKE + the Australian Rock Band King Gizzard & The Lizard Wizard.<br></p>
 
 
-    <div id="vizContainer_2" style="width:1000px; height:150px;"></div>
-	<br>
-	<p>After these two vendors were removed, a second cluster of vendors emerged. This cluster of a dozen vendors which includes artists such as Boy Harsher, Chromeo & Avalon Emerson and labels such as RuptureLDN, generated at least approximately $1,600 in revenue. Among these vendors, the median t-shirt price is $26. Among other vendors, the median t-shirt price was only $18.</p>
-
-    <div id="vizContainer" style="width:1000px; height:825px;"></div>
+<div id="vizContainer_2" style="width:1000px; height:150px;"></div>
 <br>
-    <p>Vendors, on average, will receive approximately only $365* in t-shirt revenue a year.</p>
-    <p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies...</p>
-    <p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p>
-    
+<p>After these two vendors were removed, a second cluster of vendors emerged. This cluster of a dozen vendors which includes artists such as Boy Harsher, Chromeo & Avalon Emerson and labels such as RuptureLDN, generated at least approximately $1,600 in revenue. Among these vendors, the median t-shirt price is $26. Among other vendors, the median t-shirt price was only $18.</p>
+
+<div id="vizContainer" style="width:1000px; height:825px;"></div>
+<br>
+<p>Vendors, on average, will receive approximately only $365* in t-shirt revenue a year.</p>
+<p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies...</p>
+<p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p>
+
 <h2>By either purchasing an enterprise solution or acquiring a "Print-on-Demand" Company, Bandcamp will be able to leverage its large vendor base of artists & record labels to offer competitive merchandise rates relative to wholesale providers.</h2>
 
-    <p>This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.</p>
-    
-    <h3>1. Taking a % of the Reduced Merchandising Production Costs From the Enterprise Solution Implementation as Revenue</h3>
+<p>This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.</p>
 
-    <p>For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of  Bandcamp's primary merchandise producer, they still have the option to do so.</p>
- 
-    <p>Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.</p>
+<h3>1. Taking a % of the Reduced Merchandising Production Costs From the Enterprise Solution Implementation as Revenue</h3>
 
-    <h3>2. Increased Sales of Existing or Sold Out Products</h3>
-    
+<p>For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of Bandcamp's primary merchandise producer, they still have the option to do so.</p>
+
+<p>Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.</p>
+
+<h3>2. Increased Sales of Existing or Sold Out Products</h3>
+	 
     <p>For example, a vendor may have an existing product that is sold out but wishes to sell more of it but is concerned about just how many of that new item they may sell. "Print-to-Order" Merchandising would allow them to do so. If a vendor chooses to set a limit on the number of a certain item to create a "limited release", they still have the option to do so.</p>
 
     <h3>3. Encourages Vendors to Create New Products due to Less Risk + No Upfront Costs</h3>

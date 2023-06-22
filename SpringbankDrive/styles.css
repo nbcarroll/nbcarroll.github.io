@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#input-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#result-container {
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+#compensation-result {
+  font-weight: bold;
+  font-size: 18px;
+}

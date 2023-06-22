@@ -5,11 +5,12 @@
 <!-- ### Category Name 1  -->
 
 ## [Exploring Merchandising Opportunities on Bandcamp](https://nbcarroll.github.io/RevenueComparison/index.html)
-<i>Enhancing Revenue, Reducing Risk, and Empowering Vendors</i>
+#### Enhancing Revenue, Reducing Risk, and Empowering Vendors
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
-<i>Factors Impacting Home Valuation Regression Analysis</i>
+#### Factors Impacting Home Valuation Regression Analysis
+<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg">
 
 ## [Academic Projects]([https://github.com/nbcarroll/Projects#academic-projects](https://nbcarroll.github.io/SpringbankDrive/index.html))
 

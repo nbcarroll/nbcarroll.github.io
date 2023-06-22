@@ -4,8 +4,8 @@
 
 <!-- ### Category Name 1  -->
 
-## [Exploring Merchandising Opportunities on Bandcamp](https://nbcarroll.github.io/RevenueComparison/index.html)
-#### Enhancing Revenue, Reducing Risk, and Empowering Vendors
+## [Exploring Merchandising Opportunities](https://nbcarroll.github.io/RevenueComparison/index.html)
+#### Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)

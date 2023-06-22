@@ -12,7 +12,7 @@
 #### Regression Analysis of Factors Impacting Home Valuation 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">
 
-## [Additional Projects]([https://github.com/nbcarroll/Projects]
+## [Additional Projects](https://github.com/nbcarroll/Projects)
 
 ---
 

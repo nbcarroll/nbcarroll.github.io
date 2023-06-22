@@ -9,12 +9,10 @@
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
-#### Factors Impacting Home Valuation Regression Analysis
+#### Regression Analysis of Factors Impacting Home Valuation 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">
 
-## [Academic Projects]([https://github.com/nbcarroll/Projects#academic-projects](https://nbcarroll.github.io/SpringbankDrive/index.html))
-
-
+## [Additional Projects]([https://github.com/nbcarroll/Projects]
 
 ---
 

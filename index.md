@@ -8,12 +8,7 @@
 <i>Enhancing Revenue, Reducing Risk, and Empowering Vendors</i>
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-## [Additional Projects](https://github.com/nbcarroll/Projects)
+## [Academic Projects]([https://github.com/nbcarroll/Projects](https://github.com/nbcarroll/Projects#academic-projects)
 
 ---
 

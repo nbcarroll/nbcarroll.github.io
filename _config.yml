@@ -1,13 +1,17 @@
 title: Nick Carroll, MSBA # your name (or website title) here
 logo: "https://avatars.githubusercontent.com/u/5028048?s=400&u=7580223635e88afa5ec411e42e0ff49bbaadbae9&v=4" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  <b>MS Business Analytics, Seattle University</b><br><br>
+  <b>MS Business Analytics</b><br>
+  <i>Seattle University</i>
+  <br><br>
   I am a skilled Business Analytics professional focusing on leveraging data to drive revenue growth and inform strategic decision-making. Experienced in analyzing large datasets, implementing innovative solutions, and delivering actionable insights to optimize business performance.
-  <br>
-  <b>Additional Certifications/Coursework</b>
-  Google Analytics Certification | Google <br>
-  Advanced Applied SQL for Business Intelligence and Analytics | Udemy
-
+  <br><br>
+  <b>Additional Certifications</b>
+  Google Analytics | Google <br>
+  Advanced Applied SQL for Business Intelligence and Analytics | Udemy <br>
+  Tableau 2022 Advanced: Master Tableau in Data Science
+  
+  <br><br>
   <a href="http://linkedin.com/nick-carroll1">View My LinkedIn Profile</a>
 
 theme: jekyll-theme-minimal

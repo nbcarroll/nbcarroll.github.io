@@ -7,6 +7,13 @@
 
     <style>
 
+    :root {
+                --text-color: #222;
+                --header-color: #393939;
+                --link-color: #267CB9;
+                --link-hover-color: #069;
+            }
+
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
         /* Additional CSS styles for your webpage */
@@ -294,15 +301,29 @@
             background-color: #fff;
             padding: 50px;
             font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            /* color: #727272; */
-            font-weight: 400
+            font-weight: 400;
         }
 
-        h1,h2,h3,h4,h5,h6 {
-            color: #222;
-            margin: 0 0 20px
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--header-color);
+            margin: 0 0 20px;
         }
 
+        h1 {
+            font-size: 28px;
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover, a:focus {
+            color: var(--link-hover-color);
+            font-weight: bold;
+        }
+                
         p,ul,ol,table,pre,dl {
             margin: 0 0 20px
         }
@@ -707,7 +728,7 @@
     <p>Despite only 4.96% of vendors (artists/labels) on the platform selling merchandise, this revenue stream has proven to be incredibly lucrative. In fact, in just the 24 days studied, <b>merchandise sales accounted for approximately 11% of Bandcamp's revenue</b>, amounting to over a million dollars.</p
     
     <div id="vizContainer_CategoriesComparison" style="width:1000px; height:800px;"></div>
-    
+
 <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/Different%20Item%20Categories.png?raw=true">
 
 <h2>While there are many different forms of merchandise sold, T-Shirts are the most popular.</h2>

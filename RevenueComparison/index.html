@@ -323,7 +323,7 @@
             color: var(--link-hover-color);
             font-weight: bold;
         }
-                
+
         p,ul,ol,table,pre,dl {
             margin: 0 0 20px
         }
@@ -700,15 +700,23 @@
 <body onload="CategoriesComparison(); initViz(); initViz_2(); Merch_Cat_Bar_Chart()">
 
  <body>
-   <h2>Exploring Merchandising Opportunities on Bandcamp: Enhancing Revenue, Reducing Risk, and Empowering Vendors</h2>
+   <h1>Exploring Merchandising Opportunities on Bandcamp</h1>
+   Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp
+   <br><br>
 
+   <h2> Summary</h2>
+   <div class="tools-box">
+   Bandcamp should consider leveraging it's vendor base (of artists & record labels) and purchase an enterprise solution from a "Print-on-Demand" company. This implementation would lead to revenue generation through reduced merchandising production costs, increased sales of existing or sold-out products, and by incentivizing vendors to create new products without upfront costs and reduced risks. Beyond reducing risk, vendors would benefit from reduced administrative costs and tailored business recommendations.
+  </div>
+<br>
    <div class="tools-box">
     <strong>🛠️ Tools used:</strong> Python, Tableau
   </div>
-
+<br>
   <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
+  <br>
   <div class="toggle-content" id="header1">
-    <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from Kaggle (<a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales</a>).</p>
+    <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
   </div>
 
   <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
@@ -824,10 +832,10 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
         <tableau-viz id="tableauViz"       
         src='
         https://public.tableau.com/views/BandcampCostPerShirtReductionsRevenueProjections/WEBVERSION-S4Opportunity2'
-        toolbar="hidden" hide-tabs height="800px"
-        <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
+        toolbar="hidden" hide-tabs height="800px"></tableau-viz>
+        <!-- <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
     
-       </tableau-viz>
+       </tableau-viz> -->
     
     </div>
 

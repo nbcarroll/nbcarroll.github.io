@@ -631,7 +631,7 @@
     <h4>Optimizing Product Packaging</h4>
 <br>
 
-<div class="tools-box">
+<!-- <div class="tools-box">
     <i>
         This project integrates components from a take-home assignment that was completed as part of the Masters in Business Analytics program at Seattle University.</i>
     
@@ -645,44 +645,38 @@
   <br>
   <div class="toggle-content" id="header1">
     <p> Candidate information from a client of Scalene Works. This data is from <a href="https://www.kaggle.com/datasets/avikumart/hrdatasetclassif">Kaggle</a>.</p> The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Scalene%20Works/scalene_works.ipynb">here</a>
-  </div>
+  </div> -->
+  <h1>Research Question</h1>
+  <p>The goal of this research is to answer a broad overarching question: What is the best way to present our product’s packaging?</p>
+  
+  <h2>Component 1: Packaging Aesthetics</h2>
+  <p>To answer the question, "What aesthetic choices on a beverage product’s packaging make consumers view it as ‘cool’ and assign a higher monetary value?", two hypothesis tests were conducted.</p>
+  
+  <h3>Hypothesis Test 1: Design Aesthetics</h3>
+  <p>For this test, a one-directional, paired samples t-test was conducted to determine if people prefer Design B ('Como Mountain') over Design A ('The Marigny'). Although the means are in the predicted direction, the null hypothesis cannot be rejected due to the p-value being above 0.05. Therefore, there is not enough evidence to determine a preferred aesthetic direction.</p>
+  
+  <h3>Hypothesis Test 2: Perception of Price</h3>
+  <p>Another test was conducted to assess people's opinions on the perceived price of Item C ('Phony Negroni') compared to Item F ('Rasavasda'). Similar to the previous test, the null hypothesis could not be rejected, indicating that there is not enough evidence to determine the perceived price based on aesthetics.</p>
+  
+  <p>Further analysis can be conducted using Natural Language Processing to identify specific elements that make a design more enticing. Additionally, exploring the correlation between perceived price and consumer desire to purchase is recommended.</p>
+  
+  <h2>Component 2: Packaging Description</h2>
+  <p>To assess the impact of describing a beverage as "Sparkling" versus "Sparkling Mate," a hypothesis test was conducted. However, similar to the previous tests, the null hypothesis could not be rejected, indicating no significant difference in respondents' opinions on the beverage's perceived value based on the description.</p>
+  
+  <p>It is suggested that a larger sample size could provide more statistically significant results and definitive evidence for the choice of beverage description.</p>
 
-<p><h3>Purpose</h3></p>
-<p>The purpose of this project is to develop a classification model that predicts candidates who are less likely to join a company after accepting a job offer. By achieving this, Scalene Works aims to streamline the hiring process, saving valuable time and helping their clients reduce instances of candidates reneging on job offers. This project holds the potential to address these issues effectively and create value for Scalene Works' clients.</p>
+  <div style="width:1050px; height:400px; overflow: hidden">
 
-<p><h3>Goal</h3></p>
-<p>The goal of this project is to assist Scalene Works People Solutions LLC, a talent acquisition agency, in mitigating the problem of candidates accepting job offers but failing to join the company (referred to as the "renege rate"). Through a thorough analysis of the available data and the development of a predictive model or insights, the project aims to identify candidates who are less likely to join after accepting an offer. By understanding the factors contributing to the renege rate, Scalene Works can make informed decisions and take appropriate actions to lower the renege rate, thus generating value for their clients throughout the hiring process.</p>
+    <tableau-viz id="tableauViz"       
+    src='https://public.tableau.com/views/MateSurveyPurchaseLiklihoodBasedonWordChoice/Dashboard2'
 
-<p>The dataset used in this project is a part of the recruitment process for a specific client of Scalene Works. Scalene Works supports numerous information technology (IT) companies in India with their talent acquisition needs. One of the prominent challenges faced by these companies is the significant percentage of candidates (around 30%) who accept job offers but ultimately do not join the organization. This results in substantial revenue loss and wasted time as the recruitment process must be initiated again to fill the workforce demand.</p>
+    
+    toolbar="hidden" hide-tabs height="100px"
+    <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
 
-<p>Scalene Works aims to investigate whether a predictive model can be constructed to determine the likelihood of a candidate joining the company, with a specific focus on identifying those who ultimately do not join. By accomplishing this, Scalene Works can proactively address the issue and take measures to minimize the renege rate, benefiting their clients and optimizing the recruitment process.</p>
+   </tableau-viz>
 
-<p><h3>Recommendations</h3></p>
-
-<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/feature_importance.png?raw=true">
-
-<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/Dist_days_accept_offer.png?raw=true">
-
-
-<p>Minimizing the window that a candidate is given for accepting a job offer is crucial in lowering the renege rate for Scalene Works. It is better to underpromise and be able to deliver rather than overpromise and fall short. By reducing the acceptance time window, Scalene Works can avoid situations where promised staffing is not fulfilled, thus maintaining trust with clients.</p>
-
-<p>Another recommendation is to conduct analysis on the appropriate notice period given different candidate information. This can provide valuable insights for optimizing the decision-making process.</p>
-
-<p>Scalene Works should consider legal and ethical implications as well. Age discrimination is illegal in many countries and is unethical. Instead, the proxy variable "Rex in Years (Experiences)" should be included in the model.</p>
-
-<p><h3>Model Evaluation</h3></p>
-
-<p>In my analysis to determine the most effective model for predicting whether an employee will join or not join a company after accepting an offer, I conducted tests on various models. For these models, I set the target variable as a dummy variable called 'Status_Not Joined'. My primary concern was to address scenarios where candidates renege on job offers after acceptance, which poses challenges for our clients. To evaluate the models, I used recall as the primary metric since it specifically focuses on positive cases, making it ideal for this purpose.</p>
-
-<p>Among the wide range of classification models studied, Quadratic Discriminant Analysis emerged as the most successful, achieving a recall score of 0.841. This means that if a candidate, based on the included features, is likely to renege on a job offer, this model would correctly predict it 84.1% of the time.</p>
-
-<p>Another crucial aspect I examined was the significance of various candidate features. The most influential factor in determining whether a candidate ultimately joins the company after accepting an offer was found to be the time taken by the candidate to accept the offer. Intuitively, candidates who take longer to accept are more likely to explore other options and may be less certain about accepting the offer. The classification model, along with the feature importance plot (see below), highlights the key factors ScaleneWorks should consider when assessing candidates.</p>
-
-<p>During the analysis, an important question emerged: What is the optimal time limit for candidates to accept an offer? Answering this question requires careful consideration of factors such as interview costs and the urgency to fill the position. I suggest further model construction to better address this specific question.</p>
-
-<p>In the course of the analysis, I also noticed a potential discrepancy in the 'Percent difference CTC' variable. Although this variable is not included in the data dictionary, it seems to represent the difference between the expected and offered percentage hike in CTC (Cost-to-Company). I recommend that Scalene Works investigate the source of data capture for these three variables. Additionally, having access to information about a candidate's previous job history, including the duration spent in previous roles, would provide valuable insights.</p>
-
-
+</div>
 
 </body>
 

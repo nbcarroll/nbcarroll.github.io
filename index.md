@@ -8,8 +8,8 @@
 #### Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
-## [Candidate Reneging in Job Offers](https://nbcarroll.github.io/Scalene_Works/index.html)
-#### Developing a Predictive Model
+## [HR Analytics](https://nbcarroll.github.io/Scalene_Works/index.html)
+#### Predictive Modeling for Candidate Reneging in Job Offers
 <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/scott-graham-5fNmWej4tAA-unsplash.jpg?raw=true" alt="HR Image">
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)

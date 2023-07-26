@@ -623,6 +623,76 @@
 	    
     </style>
 
+<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+
+    <script type="text/javascript">
+
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenuevs_ShirtPriceComparison/52023S3_V5T-ShirtRevenueDistribution?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+
+        function initViz_2() {
+            var containerDiv_2 = document.getElementById("vizContainer_2"),
+                url = "https://public.tableau.com/views/BandcampT-ShirtGrossRevenueComparison/Dashboard12?:language=en-US&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv_2, url, options);
+            // Create a viz object and embed it in the container div.
+                }
+
+        function CategoriesComparison() {
+            var containerDiv_2 = document.getElementById("vizContainer_CategoriesComparison"),
+                url = "https://public.tableau.com/views/BandcampCategoriesComparison/Dashboard15?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv_2, url, options);
+            // Create a viz object and embed it in the container div.
+                }
+
+        function Merch_Cat_Bar_Chart() {
+            var containerDiv_2 = document.getElementById("vizContainer_Merch_Cat_Bar_Chart"),
+                url = "https://public.tableau.com/views/BandcampMerchandiseCategoriesComparison/Dashboard14?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv_2, url, options);
+            // Create a viz object and embed it in the container div.
+                }
+
+        function toggleContent(elementId) {
+            var content = document.getElementById(elementId);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            }
+    </script>
+
 </head>
 
 
@@ -668,17 +738,14 @@
   
   <p>It is suggested that a larger sample size could provide more statistically significant results and definitive evidence for the choice of beverage description.</p>
 
-  <div style="width:1050px; height:300px; overflow: hidden">
+  <div style="width:1300px; height:450px; overflow: hidden">
 
-    <tableau-viz id="tableauViz"       
-    src='https://public.tableau.com/views/BandcampItemSalesBarChart/Dashboard14'
-    toolbar="hidden" hide-tabs height="100px"
-    <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
+ 
+    <tableau-viz id="tableauViz" src="https://public.tableau.com/views/MateSurveyPurchaseLiklihoodBasedonWordChoice/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link" toolbar="hidden" hide-tabs style="display: flex;">   
 
    </tableau-viz>
 
 </div>
-
 
 
 

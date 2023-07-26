@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Predictive Model for Candidate Reneging in Job Offers</title>
+    <title>Marketing Research Survey & Analysis</title>
 
     <style>
 
@@ -629,31 +629,34 @@
  <body>
    <h1>Marketing Research Survey & Analysis</h1>
     <h4>Optimizing Product Packaging</h4>
-<br>
 
-<!-- <div class="tools-box">
+<div class="tools-box">
     <i>
-        This project integrates components from a take-home assignment that was completed as part of the Masters in Business Analytics program at Seattle University.</i>
+        This project incorporates components from an assignment completed during the Masters in Business Analytics program at Seattle University. The objective of this project is to conduct a marketing research study to evaluate a the product packaging for hypothetical company that is selling a Sparkling Mate Beverage.</i>
     
-   </div>
+   </div> 
 <br>
    <div class="tools-box">
-    <strong>🛠️ Tools used:</strong> Python (scikit-learn, PyCaret + Plotly)
+    <strong>🛠️ Tools used:</strong> Python (Plotly, Pandas, NumPy), Microsoft Excel, Qualtrics, Tableau
   </div>
 <br>
-  <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
-  <br>
-  <div class="toggle-content" id="header1">
-    <p> Candidate information from a client of Scalene Works. This data is from <a href="https://www.kaggle.com/datasets/avikumart/hrdatasetclassif">Kaggle</a>.</p> The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Scalene%20Works/scalene_works.ipynb">here</a>
-  </div> -->
+
+
+
   <h1>Research Question</h1>
-  <p>The goal of this research is to answer a broad overarching question: What is the best way to present our product’s packaging?</p>
+  <p>The goal of this research is to answer a broad overarching question:<h4>What is the best way to present our product’s packaging?</h4></strong></p>
+
+  To address this question, a thorough assessment was conducted on the multiple criteria that constitute a product's packaging.<br><br>
+
   
   <h2>Component 1: Packaging Aesthetics</h2>
+  <img src="color_images_one_line.jpg" alt="Image 1">
+
   <p>To answer the question, "What aesthetic choices on a beverage product’s packaging make consumers view it as ‘cool’ and assign a higher monetary value?", two hypothesis tests were conducted.</p>
   
   <h3>Hypothesis Test 1: Design Aesthetics</h3>
-  <p>For this test, a one-directional, paired samples t-test was conducted to determine if people prefer Design B ('Como Mountain') over Design A ('The Marigny'). Although the means are in the predicted direction, the null hypothesis cannot be rejected due to the p-value being above 0.05. Therefore, there is not enough evidence to determine a preferred aesthetic direction.</p>
+
+  <p>For this test, a one-directional, paired samples t-test was conducted to determine if people prefer Design B ('The Marigny') over Design A ('Como Mountain'). Although the means are in the predicted direction, the null hypothesis cannot be rejected due to the p-value being above 0.05. Therefore, there is not enough evidence to determine a preferred aesthetic direction.</p>
   
   <h3>Hypothesis Test 2: Perception of Price</h3>
   <p>Another test was conducted to assess people's opinions on the perceived price of Item C ('Phony Negroni') compared to Item F ('Rasavasda'). Similar to the previous test, the null hypothesis could not be rejected, indicating that there is not enough evidence to determine the perceived price based on aesthetics.</p>
@@ -665,7 +668,7 @@
   
   <p>It is suggested that a larger sample size could provide more statistically significant results and definitive evidence for the choice of beverage description.</p>
 
-  <div style="width:1050px; height:400px; overflow: hidden">
+  <!-- <div style="width:1050px; height:400px; overflow: hidden">
 
     <tableau-viz id="tableauViz"       
     src='https://public.tableau.com/views/MateSurveyPurchaseLiklihoodBasedonWordChoice/Dashboard2'
@@ -675,10 +678,15 @@
     <tableau-viz id="tableauViz" src="https://public.tableau.com/views/MateSurveyPurchaseLiklihoodBasedonWordChoice/Dashboard2" toolbar="hidden" hide-tabs style="display: flex;">   
 
    </tableau-viz>
-</div>
+</div> -->
 
    <!--- Plotly Visuals -->
-<h2>Additional Visualizations</h2>
+
+<h2>Component 3: Packaging Containers</h2>
+<img src="packaging_Final_Version.jpg" alt="Image 1">
+
+<p>To evaluate the influence of various containers, participants were requested to rank six different options based on several criteria related to their liklihood of purchasing and perceived price.</p>
+
 
    <iframe src="Containers_Agg_Likely_to_Purchase.html"width="1000" height="800"  frameborder="0"></iframe>
    

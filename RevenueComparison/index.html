@@ -615,6 +615,16 @@
       border: 1px solid #ccc;
     }
 
+    .toggle-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .toggle-column {
+    width: 30%; /* If you want equal width for all columns, adjust according to padding/margin */
+    box-sizing: border-box;
+  }
+
   .highlight {
     border: 2px solid #000000; /* Add a black border with a width of 2 pixels */
     padding: 10px; /* Add padding to create some space between the text and the border */
@@ -700,11 +710,10 @@
 <body onload="CategoriesComparison(); initViz(); initViz_2(); Merch_Cat_Bar_Chart()">
 
  <body>
+    <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/BandcampProjectBanner.jpg?raw=true" alt="Bandcamp Records">
+    <br>
    <h1>Exploring Merchandising Opportunities</h1>
    <h3><i>Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp</i></h3>
-
-<img src="https://github.com/nbcarroll/Projects/blob/main/BandcampProjectBanner.jpg?raw=true" alt="Bandcamp Records">
-<br>
 
 <h2> Problem Statement</h2>
 <p> Bandcamp is an e-commerce platform for musicians and record labels, enabling them to sell and distribute their music and merchandise directly to fans, while also providing a space for fans to discover and purchase music from a diverse range of independent artists. Despite the significant revenue potential from merchandise sales, a large portion of vendors (artists/labels) on Bandcamp are deterred from selling merchandise due to high initial costs, risks of excess inventory, and long timelines to move inventory.</p>
@@ -720,33 +729,6 @@ This project identifies significant potential for revenue generation through the
 <p>
 The proposed PoD solution aims to overcome these obstacles, enhancing revenue, reducing risks for vendors, and encouraging vendors to create and offer new products. With this implementation, Bandcamp can effectively leverage its vast vendor base (comprising artists and record labels) to reduce merchandising production costs, increase sales of existing or sold-out products, and incentivize vendors to innovate new products without upfront costs and lower risks. Furthermore, vendors can benefit from reduced administrative costs and tailored business recommendations, creating a more vendor-friendly environment on the platform.
 </p>
-
-   <h2> Summary</h2>
-   <div class="tools-box">
-   Bandcamp should consider leveraging it's vendor base (of artists & record labels) and purchase an enterprise solution from a "Print-on-Demand" company. This implementation would lead to revenue generation through reduced merchandising production costs, increased sales of existing or sold-out products, and by incentivizing vendors to create new products without upfront costs and reduced risks. Beyond reducing risk, vendors would benefit from reduced administrative costs and tailored business recommendations.
-  </div>
-<br>
-   <div class="tools-box">
-    <strong>🛠️ Tools used:</strong> Python, Tableau
-  </div>
-<br>
-  <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
-  <br>
-  <div class="toggle-content" id="header1">
-    <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
-  </div>
-
-  <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
-  <div class="toggle-content" id="header2">
-    <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future. The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
-    <br>
-
-    <img src="https://github.com/nbcarroll/Projects/blob/main/Data_Transformation_Python.png?raw=true" alt="Data Transformation Example">
-
-    <p style="font-style: italic">* This is only a sample of the new features generated.</p>
-</div>
-<br>
-
 
 <h2> Introduction</h2>
 
@@ -771,11 +753,39 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     
     </div>
 
-
-<p>This figure does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue.</p>
+<br>
+<p><i>Note: This visualization does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue</i>.</p>
 
 <h2>Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.</h2>
 
+
+<br>
+
+<p>After analyzing all the vendors, three groups emerge...
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="flex: 1; margin: 10px; padding: 10px; background-color: #515051; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #393939; text-align: center;">
+        <h3 style="margin: 0; padding: 5px; color: #fff;">Elite Vendors</h3>
+        </div>
+        <p style="padding-top: 40px; color: #fff;">This group includes the renowned French Techno Label SAIKE and the popular Australian Rock Band King Gizzard &amp; The Lizard Wizard.</p>
+    </div>
+    
+    <div style="flex: 1; margin: 10px; padding: 10px; background-color: #a97162; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #8d5a4c; text-align: center;">
+        <h3 style="margin: 0; padding: 5px; color: #fff;">Premium Vendors</h3>
+        </div>
+        <p style="padding-top: 40px; color: #fff;">This cluster consists of around a dozen vendors, including artists like Boy Harsher, Chromeo, and Avalon Emerson, as well as labels like RuptureLDN. Each vendor individually generated approximately at least $1,600 in revenue. The median t-shirt price among these vendors is $26.</p>
+    </div>
+    
+    <div style="flex: 1; margin: 10px; padding: 10px; background-color: #629aa9; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #51788b; text-align: center;">
+        <h3 style="margin: 0; padding: 5px; color: #fff;">Standard Vendors</h3>
+        </div>
+        <p style="padding-top: 40px; color: #fff;">These are the rest of the vendors on the site who are selling t-shirts.</p>
+    </div>
+    </div> 
+    
 <div>
 
     <tableau-viz id="tableauViz"       
@@ -784,42 +794,7 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     toolbar="hidden" hide-tabs height="800px"></tableau-viz>
 
 </div>
-
-
-
-<!-- <div style="width:1000px; height:450px; overflow: hidden;">
-
-    <tableau-viz id="tableauViz"       
-      src='https://public.tableau.com/views/BandcampVendorGroupsRevenueComparison/Dashboard12'
-    toolbar="hidden" hide-tabs height="100px"
-    <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
-    
-       </tableau-viz>
-    
-        </div> -->
-
-<br>
-
-<p>After analyzing all the vendors (used here to refer to both artists and record labels), I have categorized them into three distinct groups:
-
-</p>
-<h3>Elite Vendors:</h3>
-<ul>
-  <li>This group includes the renowned French Techno Label SAIKE and the popular Australian Rock Band King Gizzard &amp; The Lizard Wizard.</li>
-</ul>
-
-<h3>Premium Vendors:</h3>
-<ul>
-  <li>This cluster consists of around a dozen vendors, including artists like Boy Harsher, Chromeo, and Avalon Emerson, as well as labels like RuptureLDN. Each vendor individually generated approximately at least $1,600 in revenue. The median t-shirt price among these vendors is $26.</li>
-</ul>
-
-<h3>Standard Vendors:</h3>
-<ul>
-  <li>These are the rest of the vendors on the site who are selling t-shirts.</li>
-</ul>
-
-<p>Vendors, on average, will receive approximately only $365* in t-shirt revenue a year.</p>
-
+        
 <div>
 
     <tableau-viz id="tableauViz"       
@@ -827,17 +802,19 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     toolbar="hidden" hide-tabs height="800px"
     <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
     
-       </tableau-viz>
+    </tableau-viz>
     
-        </div>
+</div>
 
 
-
-<br>
-        <p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies...</p>
 <p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p>
+<p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies.</p>
+<p></p> With the vast majority of vendors falling into the <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> category, it's here where Bandcamp can find its greatest opportunity. Although individual <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> might not yield high revenue, collectively they represent a significant potential. With strategic guidance and support from Bandcamp, these vendors can optimize their merchandise production, reduce risks, and increase profitability. Thus, Bandcamp's opportunity lies not only in harnessing the power of many, but also in unlocking the latent potential that exists within each individual <span style="color:#629aa9; font-weight:bold;">Standard Vendor</span>.</p>
 
- <h2 class="highlight">By either purchasing an enterprise solution or acquiring a "Print-on-Demand" Company, Bandcamp will be able to leverage its large vendor base of artists & record labels to offer competitive merchandise rates relative to wholesale providers.</h2>
+
+
+
+<h2 style=" font-weight: bold; background-color: #f0f8ff; padding: 15px; border-radius: 10px;">By either investing in an enterprise solution or acquiring a 'Print-on-Demand' (PoD) Company, Bandcamp can leverage its extensive vendor base to offer competitive merchandise rates, which not only provide an advantage over traditional wholesale providers but also confer numerous additional benefits to vendors.</h2>
 
 <p>This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.</p>
 
@@ -881,6 +858,28 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
     <h2>How would this implementation happen?</h2>
     <p>In terms of the adoption of such a system, fortunately many Print-On-Demand Services have API’s such as Printful and Gelato, to ensure a more seamless integration.</p>
+
+
+    <div class="tools-box">
+        <strong>🛠️ Tools used:</strong> Python, Tableau
+      </div>
+      <br>
+      <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
+      <br>
+      <div class="toggle-content" id="header1">
+        <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
+      </div>
+    
+      <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
+      <div class="toggle-content" id="header2">
+        <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future. The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
+        <br>
+    
+        <img src="https://github.com/nbcarroll/Projects/blob/main/Data_Transformation_Python.png?raw=true" alt="Data Transformation Example">
+    
+        <p style="font-style: italic">* This is only a sample of the new features generated.</p>
+    </div>
+
 </body>
 
 </html>

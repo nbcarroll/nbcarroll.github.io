@@ -14,15 +14,13 @@
 
 ## [King County House Sales](https://public.tableau.com/shared/CJMHQN3B4?:display_count=n&:origin=viz_share_link)
 #### Tableau Dashboard 
-<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">
+<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/king_county_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
 #### Regression Analysis of Factors Impacting Home Valuation 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">
 
 ## [Additional Projects](https://github.com/nbcarroll/Projects)
-
----
 
 ### Personal Projects
 #### [Research (Event Series)](https://researchseattle.com/)

@@ -12,6 +12,10 @@
 #### Predictive Modeling for Candidate Reneging in Job Offers
 <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/scott-graham-5fNmWej4tAA-unsplash.jpg?raw=true" alt="HR Image">
 
+## [King County House Sales](https://public.tableau.com/shared/CJMHQN3B4?:display_count=n&:origin=viz_share_link)
+#### Tableau Dashboard 
+<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">
+
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
 #### Regression Analysis of Factors Impacting Home Valuation 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">

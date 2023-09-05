@@ -22,8 +22,8 @@
 
 ## [Additional Projects](https://github.com/nbcarroll/Projects)
 
-### Personal Projects
-#### [Research (Event Series)](https://researchseattle.com/)
+## Personal Projects
+#### [Research Seattle](https://researchseattle.com/)
 #### [Design Portfolio](https://nbcdesign.tumblr.com/)
 #### [secondnature](https://secondnatureseattle.com)
 

@@ -13,9 +13,9 @@
 #### Tableau Dashboard 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/king_county_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
 
-## [Nick's Premium Burnt Coffee](https://public.tableau.com/views/NicksBurntCoffeeDashboard/MavenRoasters?:language=en-US&:display_count=n&:origin=viz_share_link)
+## [Nick's Premium Burnt Coffee](https://public.tableau.com/views/NicksBurntCoffeeDashboard/MainDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 #### Tableau Dashboard 
-<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/burnt_coffee_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
+<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/burnt_coffee_dashboard_preview.jpg" alt="Burnt Cofee">
 
 ## [HR Analytics](https://nbcarroll.github.io/Scalene_Works/index.html)
 #### Predictive Modeling for Candidate Reneging in Job Offers

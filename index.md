@@ -8,9 +8,6 @@
 #### Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp
 <img src="images/github_project_thumbnail_bandcamp.jpg?raw=true"/>
 
-## [HR Analytics](https://nbcarroll.github.io/Scalene_Works/index.html)
-#### Predictive Modeling for Candidate Reneging in Job Offers
-<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/scott-graham-5fNmWej4tAA-unsplash.jpg?raw=true" alt="HR Image">
 
 ## [King County House Sales](https://public.tableau.com/shared/CJMHQN3B4?:display_count=n&:origin=viz_share_link)
 #### Tableau Dashboard 
@@ -18,7 +15,11 @@
 
 ## [Nick's Premium Burnt Coffee](https://public.tableau.com/views/NicksBurntCoffeeDashboard/MavenRoasters?:language=en-US&:display_count=n&:origin=viz_share_link)
 #### Tableau Dashboard 
-<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/king_county_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
+<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/burnt_coffee_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
+
+## [HR Analytics](https://nbcarroll.github.io/Scalene_Works/index.html)
+#### Predictive Modeling for Candidate Reneging in Job Offers
+<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/Scalene_Works/scott-graham-5fNmWej4tAA-unsplash.jpg?raw=true" alt="HR Image">
 
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
 #### Regression Analysis of Factors Impacting Home Valuation 

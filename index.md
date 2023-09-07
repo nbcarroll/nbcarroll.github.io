@@ -16,6 +16,10 @@
 #### Tableau Dashboard 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/king_county_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
 
+## [Nick's Premium Burnt Coffee](https://public.tableau.com/views/NicksBurntCoffeeDashboard/MavenRoasters?:language=en-US&:display_count=n&:origin=viz_share_link)
+#### Tableau Dashboard 
+<img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/king_county_dashboard_preview.jpg" alt="Construction of Interstate 95, downtown Richmond">
+
 ## [Road Expansion](https://nbcarroll.github.io/SpringbankDrive/index.html)
 #### Regression Analysis of Factors Impacting Home Valuation 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg" alt="Construction of Interstate 95, downtown Richmond">

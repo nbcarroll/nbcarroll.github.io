@@ -337,7 +337,11 @@
         }
 
         h2 {
-            color: #393939
+            font-weight: bold; 
+            background-color: #f0f8ff; 
+            padding: 15px; 
+            border-radius: 10px; 
+            overflow: auto; /* This will contain the floated image */
         }
 
         h3,h4,h5,h6 {
@@ -368,6 +372,10 @@
         .wrapper {
             width: 860px;
             margin: 0 auto
+        }
+        img.wrap-around {
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some right margin to the image */
         }
 
         blockquote {
@@ -630,6 +638,37 @@
     padding: 10px; /* Add padding to create some space between the text and the border */
   }
 
+  #elite-info, #premium-info, #standard-info {
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+    .info-toggle-button {
+        background-color: #f2f2f2; /* Light grey background */
+        color: #333; /* Dark text color for contrast */
+        border: none; /* No border for a flat design */
+        padding: 10px 20px; /* Top/bottom and left/right padding */
+        margin: 10px 0; /* Margin at the top and bottom */
+        cursor: pointer; /* Cursor changes to indicate it's clickable */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    .info-toggle-button:hover {
+        background-color: #e6e6e6; /* Slightly darker grey on hover */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Larger shadow on hover */
+    }
+
+    /* Rest of your styles... */
+
+    .info {
+        transition: max-height 0.5s ease-out;
+        max-height: 0;
+        overflow: hidden;
+        display: none; /* Initially hidden */
+    }
 	    
     </style>
 
@@ -716,7 +755,7 @@
    <h3><i>Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp</i></h3>
 
 <h2> Problem Statement</h2>
-<p> Bandcamp is an e-commerce platform for musicians and record labels, enabling them to sell and distribute their music and merchandise directly to fans, while also providing a space for fans to discover and purchase music from a diverse range of independent artists. Despite the significant revenue potential from merchandise sales, a large portion of vendors (artists/labels) on Bandcamp are deterred from selling merchandise due to high initial costs, risks of excess inventory, and long timelines to move inventory.</p>
+<p> Bandcamp is aplatform for musicians and record labels, enabling them to sell and distribute their music and merchandise directly to fans, while also providing a space for fans to discover and purchase music from a diverse range of independent artists. Despite the significant revenue potential from merchandise sales, a large portion of vendors (artists/labels) on Bandcamp are deterred from selling merchandise due to high initial costs, risks of excess inventory, and long timelines to move inventory.</p>
 
 <h2>Objective</h2>
 <p>Propose a solution to enhance revenue generation, reduce risks for vendors, and encourage vendors to create new products by leveraging a Print-On-Demand enterprise solution.
@@ -738,11 +777,10 @@ but its released transaction dataset also does not distinguish merchandise as a 
     <!-- Removing the following line got rid of a huge space between the above text and the next image -->
     <!-- <div id="vizContainer_CategoriesComparison" style="width:1000px; height:800px;"></div> -->
 
-<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/Different%20Item%20Categories.png?raw=true">
+<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/Different%20Item%20Categories.jpg?raw=true"class="wrap-image">
 
 <h3>While there are many different forms of merchandise sold, T-Shirts are by far the most popular.</h3>
 There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
-
 
     <div>
 
@@ -756,38 +794,66 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     </div>
 
 <br>
-<p><i>Note: This visualization does not account for bundle deals, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue</i>.</p>
+<p><i>Note: This visualization does not account for bundles, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue</i>.</p>
 
 <h2>Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.</h2>
 
 
 <br>
 
-<p>After analyzing all the vendors, three groups emerge...
+<p>After analyzing all the vendors, three segments emerge...
 
-<div style="display: flex; justify-content: space-between;">
+    <!-- Elite Vendors -->
     <div style="flex: 1; margin: 10px; padding: 10px; background-color: #515051; position: relative;">
         <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #393939; text-align: center;">
-        <h3 style="margin: 0; padding: 5px; color: #fff;">Elite Vendors</h3>
+            <h3 style="margin: 0; padding: 5px; color: #fff;">Elite Vendors</h3>
         </div>
-        <p style="padding-top: 40px; color: #fff;">This group includes the renowned French Techno Label SAIKE and the popular Australian Rock Band King Gizzard &amp; The Lizard Wizard.</p>
+        <center><p style="padding-top: 40px; color: #fff;">The renowned French Techno Label SAIKE and the popular Rock Band King Gizzard &amp; The Lizard Wizard</p>
+        <!-- Toggle Button -->
+        <button class="info-toggle-button" onclick="toggleInfo('elite-info')">Print On Demand Fit</button></center>
+        <!-- Hidden Info -->
+        <div id="elite-info" style="display: none; transition: max-height 0.5s; overflow: hidden;">
+            <p style="color: #fff;"><br>When discussing SAIKE and King Gizzard & The Lizard Wizard, who make up this segment, it's important to consider the scale at which they operate. These entities often deal with the movement of large quantities of merchandise, including t-shirts, which is a staple for fan-related income. At this level of popularity and distribution, they are likely moving volumes that render Print on Demand (POD) solutions less cost-effective compared to wholesale production.
+
+                As the order quantity increases in wholesale operations, the cost per item typically decreases due to economies of scale. </p>
+        </div>
     </div>
     
+    <!-- Premium Vendors -->
     <div style="flex: 1; margin: 10px; padding: 10px; background-color: #a97162; position: relative;">
         <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #8d5a4c; text-align: center;">
-        <h3 style="margin: 0; padding: 5px; color: #fff;">Premium Vendors</h3>
+            <h3 style="margin: 0; padding: 5px; color: #fff;">Premium Vendors</h3>
         </div>
-        <p style="padding-top: 40px; color: #fff;">This cluster consists of around a dozen vendors, including artists like Boy Harsher, Chromeo, and Avalon Emerson, as well as labels like RuptureLDN. Each vendor individually generated approximately at least $1,600 in revenue. The median t-shirt price among these vendors is $26.</p>
+        <center><p style="padding-top: 40px; color: #fff;">$1500+ in T-Shirt Sales</p>
+        <!-- Toggle Button -->
+        <button class="info-toggle-button" onclick="toggleInfo('premium-info')">Print On Demand Fit</button></center>
+        <!-- Hidden Info -->
+        <div id="premium-info" class="info">
+            <p style="color: #fff;">For 'Premium Vendors,' it's essential to acknowledge the established success and specific needs of this segment. These vendors, including notable artists like Boy Harsher, Chromeo, and Avalon Emerson, have demonstrated significant T-shirt revenue, indicative of their ability to drive merchandise sales effectively.<br><br>It's important to recognize that these vendors may experience fluctuating sales volumes, often coinciding with specific events such as album releases or tours. These bursts of revenue, while substantial, may not be sustained consistently throughout the year, leading to variable demand periods.<br><br>Despite this, as more established entities in the industry, Premium Vendors often have the capital and the logistical infrastructure to manage bulk inventory and benefit from economies of scale, which can make traditional bulk purchasing of merchandise more appealing than Print on Demand solutions. Their brand reputation and fanbase expectations might also dictate a certain level of quality and design complexity that traditional production methods are better equipped to provide.<br><br>However, Print on Demand can still serve as a supplemental option for these vendors, offering a no-risk way to trial new designs or to provide merchandise in response to unexpected surges in demand that exceed their on-hand inventory. It can also be a strategic tool for capitalizing on short-term events without overcommitting resources.</p>
+        </div>
     </div>
+
+    <!-- Standard Vendors -->
     
     <div style="flex: 1; margin: 10px; padding: 10px; background-color: #629aa9; position: relative;">
         <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #51788b; text-align: center;">
-        <h3 style="margin: 0; padding: 5px; color: #fff;">Standard Vendors</h3>
+            <h3 style="margin: 0; padding: 5px; color: #fff;">Standard Vendors</h3>
         </div>
-        <p style="padding-top: 40px; color: #fff;">These vendors represent the majority on the site, encompassing all those who are selling t-shirts but do not fall into the elite or premium categories.</p>
+        <center><p style="padding-top: 40px; color: #fff;">Bandcamp's Core Demographic</p>
+        <!-- Toggle Button -->
+        <button class="info-toggle-button"  onclick="toggleInfo('standard-info')">Print On Demand Fit</button></center>
+        <!-- Hidden Info -->
+        <div id="standard-info" class="info">
+            <p style="color: #fff;">This diverse group is likely to include smaller record labels and independent artists who, while they may have a dedicated following, do not have the large-scale fanbase that necessitates mass production of merchandise. For these vendors, <b>the adoption of a Print on Demand (POD) solution is particularly advantageous.</b>
+                <br><br>
+                Since they are not moving large volumes of merchandise, the high costs and logistical complexities associated with bulk ordering do not align with their business model or budget constraints. POD allows these smaller entities to offer a wide range of designs without the need for a significant upfront investment in inventory. This is crucial for vendors who may have limited financial resources or who are testing the market to see what resonates with their audience. 
+
+                <br><br>
+                Additionally, these standard vendors may not have the extensive teams or deep industry knowledge that larger labels and artists possess. POD services can fill this gap by providing a streamlined, user-friendly platform that handles many aspects of the merchandise sales process, including production, shipping, and sometimes even customer service. This enables the artists and labels to focus on their core activities, like music production and promotion, without being overburdened by the demands of merchandise management.</p>
+        </div>
     </div>
-    </div> 
-    
+<br>
+<h3>Disparity in T-Shirt Sales: Revenue Distribution Amongst Music Vendors</h3>
 <div>
 
     <tableau-viz id="tableauViz"       
@@ -797,19 +863,22 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
 </div>
         
-<div>
+<br>
+<h3>Merchandise Market Dynamics: Price Point vs. Revenue for Music Merch Vendors</h3>
 
-    <tableau-viz id="tableauViz"       
-      src='https://public.tableau.com/views/BandcampMedianShirtPricevs_TotalRevenueScatterplot/52023S3_V5T-ShirtRevenueDistribution'
-    toolbar="hidden" hide-tabs height="800px"
-    <tableau-viz id="tableauViz" src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" toolbar="hidden" hide-tabs style="display: flex;">   
-    
-    </tableau-viz>
-    
-</div>
+    <div>
+
+        <tableau-viz id="tableauViz"       
+        src='https://public.tableau.com/views/BandcampMedianShirtPricevs_TotalRevenueScatterplot/52023S3_V5T-ShirtRevenueDistribution'
+        toolbar="hidden" hide-tabs height="800px"></tableau-viz>
+
+    </div>
 
 
-<p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p>
+<!-- <p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p> -->
+
+<img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/Revenue%20Comparison%20Across%20Groups.jpg?raw=true" alt="Revenue Comparison" class="wrap-around">
+
 <p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies.</p>
 <p></p> With the vast majority of vendors falling into the <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> category, it's here where Bandcamp can find its greatest opportunity. Although individual <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> might not yield high revenue, collectively they represent a significant potential. With strategic guidance and support from Bandcamp, these vendors can optimize their merchandise production, reduce risks, and increase profitability. Thus, Bandcamp's opportunity lies not only in harnessing the power of many, but also in unlocking the latent potential that exists within each individual <span style="color:#629aa9; font-weight:bold;">Standard Vendor</span>.</p>
 
@@ -817,7 +886,7 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
 
 <h2 style=" font-weight: bold; background-color: #f0f8ff; padding: 15px; border-radius: 10px;">By either investing in an enterprise solution or acquiring a 'Print-on-Demand' (PoD) Company, Bandcamp can leverage its extensive vendor base to offer competitive merchandise rates, which not only provide an advantage over traditional wholesale providers but also confer numerous additional benefits to vendors.</h2>
-
+ 
 <p>This is achieved by guaranteeing a high volume of production for a merchandise supplier. There are three potential impacts to revenue that this opportunity presents.</p>
 
 <h3>1. Taking a % of the Reduced Merchandising Production Costs From the Enterprise Solution Implementation as Revenue</h3>
@@ -881,6 +950,21 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     
         <p style="font-style: italic">* This is only a sample of the new features generated.</p>
     </div>
+
+    <script>
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.maxHeight) {
+                info.style.maxHeight = null;
+                setTimeout(function () {
+                    info.style.display = "none";
+                }, 500); // This should match the CSS transition time
+            } else {
+                info.style.display = "block";
+                info.style.maxHeight = info.scrollHeight + "px";
+            }
+        }
+    </script>
 
 </body>
 

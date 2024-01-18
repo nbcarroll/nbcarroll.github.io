@@ -827,6 +827,26 @@
 
 <ul>
   <li><strong>Seamless Data Integration</strong>: The prepared data, stored in the SQL database, was seamlessly integrated into Tableau. This integration enabled a fluid transfer of information from the storage database to the visualization platform.</li>
+
+<!-- 
+
+  <ol><li><strong>Project Phase Two: Analysis of Alaska Airlines SEA-Tac Departures (2015-2023)</li></strong>
+  <p>In my initial analysis, a concern I had was the accuracy of correlating airplane tail numbers with their respective flights.</p>
+
+  <p>Tail numbers serve as unique identifiers for aircraft, similar to license plates on cars. However, these numbers can be reassigned to different aircraft over time, which could potentially lead to inaccuracies in data analysis. To tackle this issue, I developed a SQL query as part of the data importation process into Tableau. This query was crucial for accurately matching tail numbers with their corresponding aircraft registration details, thereby ensuring that each flight's data was correctly associated with the appropriate aircraft information at that particular time.</p>
+
+  <p>The query process entailed joining several tables, including flight departures, aircraft registration, and aircraft model details. I used a subquery to extract and modify the tail number from the flight departure data, which was then used to left join with the aircraft registration table. Additional conditions were applied in this join to verify that the aircraft registration's 'Expiration Date' was before the flight's departure date, and the flight's departure date was after the aircraft's 'CertIssueDate'. The final step involved joining this data with the aircraft model details table based on a common model code. This meticulous query not only addressed the issue of tail number reassignment but also significantly enhanced the data integrity for my analysis.</p>
+
+  <p>Implementing this SQL query was a key factor in the success of my project. It allowed me to import data into Tableau that was clean, accurate, and well-structured, ensuring that my analysis and subsequent conclusions were based on reliable and current information.</p>
+  <li>
+    <button onclick="toggleContent('contentToToggle')">Show Entity-Relationship Diagram</button> <br><br>
+
+<div id="contentToToggle" style="display: none;">
+    <img src="Table_Relationships.png">
+</div>
+  </li>
+</ol> -->
+
   <li><strong>Interactive Dashboard Creation</strong>: Utilizing Tableau's dynamic visualization capabilities, an interactive dashboard was developed. This dashboard served as a central tool for visual data exploration, enabling the analysis of complex patterns and trends in airline delays.</li>
   <li><strong>Deriving Analytical Insights</strong>: Tableau played a critical role in converting complex datasets into clear, actionable insights. Its sophisticated analytical tools allowed for the extraction of significant patterns, aiding in the comprehensive understanding of the factors contributing to airline delays.</li>
 </ul>

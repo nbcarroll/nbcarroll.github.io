@@ -685,7 +685,8 @@
 </head>
 
 
-<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">   
+</script>
 
     <script type="text/javascript">
 
@@ -801,7 +802,8 @@
 
    <h2>Tools Used</h2>
    <h3><strong>Python for Data Preprocessing</strong></h3>
-
+   <div class="tools-box">
+    🛠️ The Jupyter Notebooks can be found <a href="https://github.com/nbcarroll/nbcarroll.github.io/tree/master/airline_delay_analysis/Python%20Files">here</a>.</div><br>
 <ul>
   <li><strong>Handling Mixed-Width Format Files</strong>: A significant challenge in preprocessing involved the 2015 Aircraft Registration Database from the Federal Aviation Administration, which was presented in a mixed-width format. This format combines elements of fixed-width and variable-width fields, requiring specialized parsing techniques. Python was instrumental in accurately processing these files, ensuring that each data field was correctly identified and extracted.</li>
   <li><strong>Data Cleaning</strong>: Particular attention was given to cleaning datetime values using Python's libraries. This step was crucial to maintain the integrity of time-oriented data, particularly important in the context of flight delays and scheduling.</li>
@@ -810,8 +812,14 @@
 
 <h3><strong>SQL Database for Data Storage</strong></h3>
 
+<button onclick="toggleContent('contentToToggle')">Show Entity-Relationship Diagram</button> <br><br>
+
+<div id="contentToToggle" style="display: none;">
+    <img src="Table_Relationships.png">
+</div>
 <ul>
   <li><strong>Local Database Setup</strong>: A comprehensive SQL database was set up locally to house the processed data. This database served as the primary storage for the extensive dataset, including flight details, airport coordinates, and the nuanced aircraft registration information.</li>
+
   <li><strong>Efficient Data Handling</strong>: The SQL database was pivotal for effective data management, facilitating advanced querying, systematic updating, and efficient retrieval of diverse datasets for analysis.</li>
 </ul>
 

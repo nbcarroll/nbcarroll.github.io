@@ -10,7 +10,7 @@
 
 ## [Airline Delay Analysis](https://nbcarroll.github.io/airline_delay_analysis/index.html)
 #### Tableau Dashboard
-<img src="luca-micheli-RpvC77-exG0-unsplash.jpg" style="width: auto; height: auto">
+<img src="images/bao-menglong--FhoJYnw-cg-unsplash.jpg" style="width: auto; height: auto">
 
 ## [King County House Sales](https://public.tableau.com/app/profile/nbcarr0ll/viz/KingCountyDashboard_16956716446600/DashboardKingCountyHouseSales)
 #### Tableau Dashboard 

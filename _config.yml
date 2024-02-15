@@ -1,7 +1,18 @@
 title: Nick Carroll, MSBA # your name (or website title) here
 logo: "https://github.com/nbcarroll/nbcarroll.github.io/raw/master/images/Headshot.png"
 
+
+<!-- Add the Font Awesome library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<!-- LinkedIn icon -->
+
 description: > # your text below (remove <br> elements if you don't need line breaks)
+  📧 <a href="mailto:nickbcarroll@gmail.com">Email</a>
+  <i class="fab fa-linkedin"></i> <a href="http://linkedin.com/nick-carroll1">LinkedIn</a>
+
+  <br>
+  
   <b>MS Business Analytics</b><br>
   <i>Seattle University</i>
   <br><br>
@@ -9,8 +20,6 @@ description: > # your text below (remove <br> elements if you don't need line br
   - Google Analytics | Google <br>
   - Advanced Applied SQL for Business Intelligence and Analytics | Udemy <br>
   - Tableau 2022 Advanced: Master Tableau in Data Science | Udemy<br>
-
-  <a href="http://linkedin.com/nick-carroll1">View My LinkedIn Profile</a>
 
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

@@ -51,7 +51,7 @@
 Additional Projects found via [Github](https://github.com/nbcarroll/Projects).
 
 ### Personal Projects
-[Research Seattle](https://researchseattle.com/) | [Graphic/Video Design](https://nbcdesign.tumblr.com/) | [secondnature](https://secondnatureseattle.com)
+[Research Seattle LLC](https://researchseattle.com/) | [Graphic/Video Design](https://nbcdesign.tumblr.com/) | [secondnature](https://secondnatureseattle.com)
 
 <!-- <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->

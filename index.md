@@ -36,7 +36,7 @@
 ## [Road Expansion: Regression Analysis of Factors Impacting Home Valuation](https://nbcarroll.github.io/SpringbankDrive/index.html)
 🛠️ <b>Tools</b>: R, Excel <br>
 🧠 <b>Skills</b>: Linear Regression, Data Analysis
-
+ 
 <img src="https://raw.githubusercontent.com/nbcarroll/nbcarroll.github.io/master/SpringbankDrive/Construction_of_Interstate_95%2C_downtown_Richmond_(2899336022).jpg"  style="width: auto; height: auto" alt="Construction of Interstate 95, downtown Richmond">
 
 ## [Nick's Premium Burnt Coffee Dashboard](https://public.tableau.com/views/NicksBurntCoffeeDashboard/MainDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)

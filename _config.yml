@@ -11,9 +11,14 @@ description: > # your text below (remove <br> elements if you don't need line br
   <i>Seattle University</i>
   <br><br>
   <b>Additional Certifications</b> <br>
-  - Google Analytics | Google <br>
-  - Advanced Applied SQL for Business Intelligence and Analytics | Udemy <br>
-  - Tableau 2022 Advanced: Master Tableau in Data Science | Udemy<br>
+
+  ➤ Advanced Applied SQL for Business Intelligence and Analytics | Udemy <br>
+   ➤ Tableau 2022 Advanced: Master Tableau in Data Science | Udemy
+  <br>
+  ➤ Power Query, Power Pivot | Maven Analytics
+  <br>
+  ➤ Google Analytics | Google <br>
+
 
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here

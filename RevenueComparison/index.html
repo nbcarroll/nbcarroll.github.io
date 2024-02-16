@@ -644,6 +644,25 @@
     overflow: hidden;
 }
 
+.toggle-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #e2e6ea;
+}
+
+.hidden {
+  display: none;
+
+
     .info-toggle-button {
         background-color: #f2f2f2; /* Light grey background */
         color: #333; /* Dark text color for contrast */
@@ -680,6 +699,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-S5VTF9C9ES');
+</script>
+
+<!-- Function to toggle the display of a paragraph --> 
+
+<script>
+function toggleParagraph(id) {
+  var x = document.getElementById(id);
+  if (x.classList.contains('hidden')) {
+    x.classList.remove('hidden');
+  } else {
+    x.classList.add('hidden');
+  }
+}
 </script>
 
 </head>
@@ -754,6 +786,8 @@
             }
             }
     </script>
+
+
 </head>
 
 <body onload="CategoriesComparison(); initViz(); initViz_2(); Merch_Cat_Bar_Chart()">
@@ -764,6 +798,35 @@
    <h1>Exploring Merchandising Opportunities</h1>
    <h3><i>Enhancing Revenue, Reducing Risk, and Empowering Vendors on Bandcamp</i></h3>
 
+
+
+   <h2> Summary</h2>
+   <p>Bandcamp serves as a pivotal digital marketplace, connecting musicians and record labels directly with their fans. Despite its reputation primarily as a music sales platform, merchandise transactions—which are not actively promoted or tracked—account for 11% of Bandcamp's total revenue. This reveals a significant, yet underexplored, avenue for growth.</p>
+<p>
+   While digital music sales face no cost concerns, merchandising challenges like high upfront costs and logistical issues affect many vendors, especially smaller artists and labels. Implementing a Print-on-Demand (PoD) model could significantly benefit Bandcamp and its vendors by reducing the risks and costs associated with traditional merchandising. This model promises competitive pricing through collective bargaining, aligning PoD costs with wholesale rates and enhancing Bandcamp's capacity to serve its diverse community with a more comprehensive platform for music and merchandise.
+</p>
+
+      <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
+      <br>
+      <div class="toggle-content" id="header1">
+        <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
+      </div>
+    
+      <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
+      <div class="toggle-content" id="header2">
+        <p>Python was used to create additional columns that enabled this analysis to occur. In the original, unprocessed dataset, merchandise purchases of items such as "shirts" or "tote bags", as well as other physical items like "Vinyl" or "CDs", are all in the same category of "physical items" (denoted as "p") in the “item_type” column. </p>
+        <p>
+        However, by analyzing the 'item_description' column, information is discovered that enables more granular levels of grouping data. For example, we can observe 't-shirt' in the item description for "[Pre-order] Anti Commercial Sounds t-shirt (Reload)". Based on this, additional columns of data for various subcategories were created.</p>
+         The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
+        <br>
+    
+        <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison//column_generation.jpeg?raw=true" alt="Bandcamp Records">
+
+        <p style="font-style: italic">Note: This is only a sample of the new features generated.</p>
+    </div>
+    <br>
+
+
 <h2> Problem Statement</h2>
 <p> Bandcamp is a platform for musicians and record labels, enabling them to sell and distribute their music and merchandise directly to fans, while also providing a space for fans to discover and purchase music from a diverse range of independent artists. Despite the significant revenue potential from merchandise sales, a large portion of vendors (artists/labels) on Bandcamp are deterred from selling merchandise due to high initial costs, risks of excess inventory, and long timelines to move inventory.</p>
 
@@ -771,13 +834,6 @@
 <p>Propose a solution to enhance revenue generation, reduce risks for vendors, and encourage vendors to create new products by leveraging a Print-On-Demand enterprise solution.
 </p>
 
-<h2 id="overview">Overview</h2>
-<p>
-This project identifies significant potential for revenue generation through the implementation of a Print-on-Demand (PoD) enterprise solution on Bandcamp. 
-</p>
-<p>
-The proposed PoD solution aims to overcome these obstacles, enhancing revenue, reducing risks for vendors, and encouraging vendors to create and offer new products. With this implementation, Bandcamp can effectively leverage its vast vendor base (comprising artists and record labels) to reduce merchandising production costs, increase sales of existing or sold-out products, and incentivize vendors to innovate new products without upfront costs and lower risks. Furthermore, vendors can benefit from reduced administrative costs and tailored business recommendations, creating a more vendor-friendly environment on the platform.
-</p>
 
 <h2>The platform has a largely untapped yet surprisingly profitable revenue stream: merchandise.</h2>
 <p>In just 24 days, it was revealed that a mere 4.96% of vendors selling merchandise contributed to a staggering 11% of Bandcamp's total revenue, exceeding a million dollars.</p>
@@ -797,7 +853,7 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     <div>
         <tableau-viz id="tableauViz"       
         src='https://public.tableau.com/views/BandcampItemSalesBarChart/Dashboard14?:language=en-US&:display_count=n&:origin=viz_share_link'
-        toolbar="hidden" hide-tabs height="200px"
+        toolbar="hidden" hide-tabs height="200px">
            
     
        </tableau-viz>
@@ -814,8 +870,15 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
 <p>After analyzing all the vendors, three segments emerge...
 
+ 
+<!-- Main Divider for 3 Vendors -->
+
+<div style="display: flex; justify-content: space-around;">
+
     <!-- Elite Vendors -->
-    <div style="flex: 1; margin: 10px; padding: 10px; background-color: #515051; position: relative;">
+
+<div style="flex: 1; margin: 10px; padding: 10px; background-color: #515051; position: relative;">
+
         <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #393939; text-align: center;">
             <h3 style="margin: 0; padding: 5px; color: #fff;">Elite Vendors</h3>
         </div>
@@ -824,12 +887,14 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
         <button class="info-toggle-button" onclick="toggleInfo('elite-info')">Print On Demand Fit</button></center>
         <!-- Hidden Info -->
         <div id="elite-info" style="display: none; transition: max-height 0.5s; overflow: hidden;">
-            <p style="color: #fff;"><br>When discussing SAIKE and King Gizzard & The Lizard Wizard, who make up this segment, it's important to consider the scale at which they operate. These entities often deal with the movement of large quantities of merchandise, including t-shirts, which is a staple for fan-related income. At this level of popularity and distribution, they are likely moving volumes that render Print on Demand (POD) solutions less cost-effective compared to wholesale production.
+            <p style="color: #fff;"><br>At this level of popularity and merchandise distribution, these vendors are likely moving volumes that render Print on Demand (POD) solutions less cost-effective compared to wholesale production.
 
                 As the order quantity increases in wholesale operations, the cost per item typically decreases due to economies of scale. </p>
         </div>
-    </div>
+</div>
     
+
+
     <!-- Premium Vendors -->
     <div style="flex: 1; margin: 10px; padding: 10px; background-color: #a97162; position: relative;">
         <div style="position: absolute; top: 0; left: 0; right: 0; background-color: #8d5a4c; text-align: center;">
@@ -863,6 +928,9 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
                 Additionally, these standard vendors may not have the extensive teams or deep industry knowledge that larger labels and artists possess. POD services can fill this gap by providing a streamlined, user-friendly platform that handles many aspects of the merchandise sales process, including production, shipping, and sometimes even customer service. This enables the artists and labels to focus on their core activities, like music production and promotion, without being overburdened by the demands of merchandise management.</p>
         </div>
     </div>
+
+</div>
+
 <br>
 <h3>Disparity in T-Shirt Sales: Revenue Distribution Amongst Music Vendors</h3>
 <div>
@@ -902,9 +970,9 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
 <h3>1. Taking a % of the Reduced Merchandising Production Costs From the Enterprise Solution Implementation as Revenue</h3>
 
-<p>For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of Bandcamp's primary merchandise producer, they still have the option to do so.</p>
+<p>For example, if Bandcamp negotiated a 20% enterprise discount, a shirt that previously cost a vendor $10 upfront product would now cost the vendor $9 with Bandcamp taking $1 from the transaction. If vendors choose to handle merchandise sold through Bandcamp outside of Bandcamp's primary merchandise producer, they still have the option to do so.
 
-<p>Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.</p>
+Changing different parameters such as Bandcamp's enterprise discount rate, shirts sold, and the average price per shirt produces different outcomes and effects different revenue streams. A general approximation is that 584,000 t-shirts are sold on the platform in a year.</p>
 
 <h3>2. Increased Sales of Existing or Sold Out Products</h3>
 	 
@@ -946,24 +1014,7 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 
  
       <br>
-      <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
-      <br>
-      <div class="toggle-content" id="header1">
-        <p>One Million Transactions on the platform from September 9th, 2020 to October 2nd, 2020. This data is from <a href="https://www.kaggle.com/datasets/mathurinache/1000000-bandcamp-sales">Kaggle</a>.</p>
-      </div>
-    
-      <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
-      <div class="toggle-content" id="header2">
-        <p>Python was used to create additional columns that enabled this analysis to occur. In the original, unprocessed dataset, merchandise purchases of items such as "shirts" or "tote bags", as well as other physical items like "Vinyl" or "CDs", are all in the same category of "physical items" (denoted as "p") in the “item_type” column. </p>
-        <p>
-        However, by analyzing the 'item_description' column, information is discovered that enables more granular levels of grouping data. For example, we can observe 't-shirt' in the item description for "[Pre-order] Anti Commercial Sounds t-shirt (Reload)". Based on this, additional columns of data for various subcategories were created.</p>
-         The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
-        <br>
-    
-        <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison//column_generation.jpeg?raw=true" alt="Bandcamp Records">
 
-        <p style="font-style: italic">Note: This is only a sample of the new features generated.</p>
-    </div>
 
     <script>
         function toggleInfo(id) {

@@ -944,9 +944,7 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     <p>Bandcamp should consider a controlled approach to product offerings to avoid marketplace saturation. By instituting a cap on product listings for new vendors and removing unsold items after a predetermined period, Bandcamp can preserve a curated selection and optimize resource use.
     </p>
 
-    <div class="tools-box">
-        <strong>🛠️ Tools used:</strong> Python, Tableau
-      </div>
+ 
       <br>
       <div class="toggle-header" onclick="toggleContent('header1')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>What Data is Used in this Analysis?</strong></div>
       <br>
@@ -956,12 +954,15 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
     
       <div class="toggle-header" onclick="toggleContent('header2')"><span style="font-size: 16px; margin-right: 5px;">➕</span> <strong>How Has this Data Been Processed?</strong></div>
       <div class="toggle-content" id="header2">
-        <p>To generate more detailed categories of data from the dataset, Python was utilized. For instance, a transaction that involved a tote bag was previously coded as simply 'p', which denoted a physical item, without any additional categorization to specify that the item belonged to the 'Tote Bags' sub-category under the broader 'Accessories' category. However, by analyzing the 'item_description' feature, more granular information about each transaction was generated. In addition, additional features were created such as 'Buyer/Seller Country Match' to enable further analysis in the future. The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
+        <p>Python was used to create additional columns that enabled this analysis to occur. In the original, unprocessed dataset, merchandise purchases of items such as "shirts" or "tote bags", as well as other physical items like "Vinyl" or "CDs", are all in the same category of "physical items" (denoted as "p") in the “item_type” column. </p>
+        <p>
+        However, by analyzing the 'item_description' column, information is discovered that enables more granular levels of grouping data. For example, we can observe 't-shirt' in the item description for "[Pre-order] Anti Commercial Sounds t-shirt (Reload)". Based on this, additional columns of data for various subcategories were created.</p>
+         The Jupyter Notebook can be found <a href="https://github.com/nbcarroll/Projects/blob/main/Bandcamp/Merchandise%20Analysis/bandcamp_sales_preprocessing.ipynb">here</a>.</p>
         <br>
     
-        <img src="https://github.com/nbcarroll/Projects/blob/main/Data_Transformation_Python.png?raw=true" alt="Data Transformation Example">
-    
-        <p style="font-style: italic">* This is only a sample of the new features generated.</p>
+        <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison//column_generation.jpeg?raw=true" alt="Bandcamp Records">
+
+        <p style="font-style: italic">Note: This is only a sample of the new features generated.</p>
     </div>
 
     <script>

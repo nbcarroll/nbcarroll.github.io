@@ -863,9 +863,6 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 <br>
 <p><i>Note: This visualization does not account for bundles, where musical releases are solid with physical merchandise. For instance, a t-shirt may be sold with a vinyl record. 315 bundle deals included a t-shirt, generating $34,391.92 in revenue</i>.</p>
 
-<h2>Although there are at least 1943 vendors (artists/labels) who sold t-shirts on the platform, individual vendor's total revenue varies greatly.</h2>
-
-
 <br>
 
 <p>After analyzing all the vendors, three segments emerge...
@@ -932,33 +929,22 @@ There were approximately 16,127 shirts sold, generating $383,788.68 in revenue.
 </div>
 
 <br>
-<h3>Disparity in T-Shirt Sales: Revenue Distribution Amongst Music Vendors</h3>
-<div>
-
-    <tableau-viz id="tableauViz"       
-    src='
-    https://public.tableau.com/views/BandcampVendorGroupsRevenueComparison/Dashboard12'
-    toolbar="hidden" hide-tabs height="800px"></tableau-viz>
-
-</div>
-        
-<br>
-<h3>Merchandise Market Dynamics: Price Point vs. Revenue</h3>
-
-    <div>
-
-        <tableau-viz id="tableauViz"       
-        src='https://public.tableau.com/views/BandcampMedianShirtPricevs_TotalRevenueScatterplot/52023S3_V5T-ShirtRevenueDistribution'
-        toolbar="hidden" hide-tabs height="800px"></tableau-viz>
-
-    </div>
-
 
 <!-- <p><em>* This number was calculated by taking the median revenue ($28) for vendors who sold t-shirts during our time frame and extrapolating that to the entire year. Seasonality was not factored in.</em></p> -->
 
 <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/RevenueComparison/Revenue%20Comparison%20Across%20Groups.jpg?raw=true" alt="Revenue Comparison" class="wrap-around">
 <br>
-<p>With so little revenue potential relative to the total initial costs to print merchandise coupled with the risk of excess inventory and long timelines to move this inventory, for many vendors, making merchandise is often not worth the risk. However, the sum is a whole of its parts, and this is where an opportunity lies.</p>
+<p>
+Although standard vendors contribute to 69.37% of T-shirt revenue, <b>only 3.09% of these vendors actually sell T-shirts. In contrast, all elite and premium vendors sell shirts.</b>
+</p>
+
+<p>
+    Historically, music merchandise has predominantly been sold through wholesale merchandising. Given the risks associated with merchandise production, including the financial implications of unsold inventory, it's understandable why many vendors hesitate to engage in this market.
+</p>  
+<p>
+    Producing more merchandise can lower the average cost per item. However, overly optimistic sales forecasts can result in excess inventory. This situation forces vendors to either endure long periods with unsold stock, or to sell merchandise at a loss—or in some cases, without any revenue at all. Broadening the perspective, when considering other product categories such as digital and physical music sales, along with various forms of merchandise, standard vendors represent 97.81% of revenue. Reducing risk for these vendors presents a significant opportunity for platforms like Bandcamp.</p>
+
+
 <p></p> With the vast majority of vendors falling into the <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> category, it's here where Bandcamp can find its greatest opportunity. Although individual <span style="color:#629aa9; font-weight:bold;">Standard Vendors</span> might not yield high revenue, collectively they represent a significant potential. With strategic guidance and support from Bandcamp, these vendors can optimize their merchandise production, reduce risks, and increase profitability. Thus, Bandcamp's opportunity lies not only in harnessing the power of many, but also in unlocking the latent potential that exists within each individual <span style="color:#629aa9; font-weight:bold;">Standard Vendor</span>.</p>
 
 
@@ -1014,6 +1000,32 @@ Changing different parameters such as Bandcamp's enterprise discount rate, shirt
 
  
       <br>
+
+
+<h2>
+    Additional Visualizations
+</h2>
+
+<h3>Disparity in T-Shirt Sales: Revenue Distribution Amongst Music Vendors</h3>
+<div>
+
+    <tableau-viz id="tableauViz"       
+    src='
+    https://public.tableau.com/views/BandcampVendorGroupsRevenueComparison/Dashboard12'
+    toolbar="hidden" hide-tabs height="800px"></tableau-viz>
+
+</div>
+        
+<br>
+<h3>Merchandise Market Dynamics: Price Point vs. Revenue</h3>
+
+    <div>
+
+        <tableau-viz id="tableauViz"       
+        src='https://public.tableau.com/views/BandcampMedianShirtPricevs_TotalRevenueScatterplot/52023S3_V5T-ShirtRevenueDistribution'
+        toolbar="hidden" hide-tabs height="800px"></tableau-viz>
+
+    </div>
 
 
     <script>

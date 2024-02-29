@@ -9,7 +9,7 @@
 
 <img src="mick-haupt-_kXXlLPnKEc-unsplash.jpg" style="width: auto; height: auto">
 
-## [Airline Delay Analysis](https://nbcarroll.github.io/airline_delay_analysis/index.html)
+## [Alaska Airlines Carrier Delays at Seattle-Tacoma International Airport](https://nbcarroll.github.io/airline_delay_analysis/index.html)
 🛠️ <b>Tools</b>: SQL, Tableau, Python, Excel <br>
 🧠 <b>Skills</b>: Data Visualization, Statistical Analysis
 

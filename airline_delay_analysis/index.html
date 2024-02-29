@@ -801,10 +801,10 @@
             </div>
 
             <br>
-            
+
             <h3>Alaska Airlines Fleet</h3>
-            <p>Intuitively it makes sense that assessing the airplanes themselves is a great place to investigate first when assessing carrier delays as mechanical problems are a primary cause of carrier delays.</p>
-            <p>There are two main manufacturers Alaska Airlines has used planes from in the past decade: Boeing and Airbus. Over time, the fleet composition has become more centered on Boeing.</p>
+            <p>We'll begin our analysis with a closer look at the Alaska Airlines fleet. It's a logical starting point to examine the aircraft directly since mechanical issues are a leading factor in carrier delays.</p>
+            <p>There are two aircraft manufacturers Alaska Airlines has purchased aircraft from in the past decade: Boeing and Airbus. Over time, the fleet composition has become more centered on Boeing.</p>
    
             <!-- Original Dashboard -->
             <div>
@@ -812,8 +812,9 @@
                 src='https://public.tableau.com/views/AlaskaAirlinesFleetComposition/V2_AgingFleet?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link'
                 toolbar="hidden" hide-tabs height=800px>
             </div>
+    <br>
+    The fleet composition has increasingly favored Boeing aircraft over time. This raises the question: was shifting focus towards Boeing the right move? When analyzing carrier delays specifically, the following visual, which looks at Carrier Delays across all years in the dataset, suggests it was a prudent decision. Airbus aircraft, on average, experience higher rates of carrier delays, with the incidence of delays escalating more sharply as these planes age. While these findings are statistically significant, it's important to consider that other factors could be at play, such as total miles flown, frequency of service, passenger capacity, and more, which might also influence the observed trends.<br>
 
-            Based on Carrier Delays, this was a wise decision as we can see in this plot.<br>
                         <!-- Relationship between Age + Carrier Delay Across All Years -->
                         <div>
                             <tableau-viz id="tableauViz"       
@@ -821,18 +822,14 @@
                             toolbar="hidden" hide-tabs height=800px>
                         </div>
 
+
             <h3>Day of the Week</h3>
 
             <h3>Time of Day</h3>
             When we examine how the timing of a flight correlates with delays, taking into account various years and destination airports, we observe significant variability.
 
-                       <!-- Relationship between Age + Carrier Delay Across All Years -->
-                       <div>
-                        <tableau-viz id="tableauViz"       
-                        src='https://public.tableau.com/views/RelationshipBetweenAircraftAgeandCarrierDelay-AcrossAllYears/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link'
-                        toolbar="hidden" hide-tabs height=800px>
-                    </div>
 
+    <br>
             <h3>Seasonality</h3>
             <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/airline_delay_analysis/static_viz/Average%20Carrier%20Delay%20Time%20by%20MonthAmong%20Flights%20Which%20Experienced%20a%20Carrier%20Delay.jpg?raw=true"class="wrap-image">
             

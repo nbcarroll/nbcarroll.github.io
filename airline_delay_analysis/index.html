@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Airline Delay Analysis</title>
+    <title>Analysis of Alaska Airlines Carrier Delays at Seattle-Tacoma International Airport</title>
 
     <style>
 
@@ -759,44 +759,80 @@
 
 <!-- <body onload="CategoriesComparison(); initViz(); initViz_2(); Merch_Cat_Bar_Chart()"> -->
 
-<h1>Airline Delay Analysis</h1>
+<h1>Analysis of Alaska Airlines Carrier Delays at Seattle-Tacoma International Airport</h1>
+
+    <h2>Background</h2>
+    <p>Seattle-Tacoma International Airport, colloquially known as Sea-Tac, is a pivotal hub in the aviation network of the Pacific Northwest and plays a critical role in the global air transport infrastructure. As the primary commercial airport serving Seattle and Tacoma, it is an essential gateway for both passenger and cargo traffic. Its strategic location, coupled with a robust array of domestic and international flights, positions Sea-Tac as a vital nexus connecting various global destinations.</p>
+    <p>For Alaska Airlines, Seattle-Tacoma International Airport is more than just a significant hub; it is the heart of its operations. As the largest carrier operating out of Sea-Tac, Alaska Airlines has a substantial portion of its fleet and flights concentrated here. The airport serves as the primary base for its extensive network of routes, especially those connecting major cities across the United States, and plays a crucial role in Alaska Airlines' growth strategy and market presence. The efficiency and functionality of Sea-Tac directly impact Alaska Airlines' operational success, customer satisfaction, and competitive standing in the airline industry.</p>
+ 
+        <h2>Objective</h2>
+        <aside>
+            <p>💡 The objective of this study is to conduct an in-depth analysis of airline delays at Seattle-Tacoma International Airport, <strong>with a particular focus on understanding the patterns and root causes of Carrier delays</strong>, which includes delays due to maintenance or mechanical problems, crew problems (like delays in crew scheduling), cleaning, fueling, etc. </p>
+            Carrier Delays are directly within the control of the airline. These are not related to weather, air traffic control, or other factors outside the airline's control.
+        </aside>
+        <p>By leveraging comprehensive data spanning from 2015 to 2023, the study aims to identify key factors contributing to operational inefficiencies and propose actionable insights to enhance punctuality and service quality. Given the significant role of Sea-Tac in Alaska Airlines' operations, this analysis is particularly relevant for strategizing improvements in the airline's performance and customer experience.</p>
+ 
+ 
+        <h2>Scope</h2>
+        <p>This report will examine a range of factors influencing airline delays at Sea-Tac, using historical flight data, and airline registration information. The analysis will cover an eight-year period from 2016 to 2023, providing a longitudinal view of trends and variability in delay occurrences. By integrating these diverse data sources, the report will offer a comprehensive overview of delay dynamics, focusing on aspects most pertinent to Alaska Airlines and the broader airport operational ecosystem.</p>
+
+        <h2>The Different Delay Types</h2>
+
+        <p>There are many reasons that a flight might be delayed. A fundamental aspect of all delays is that they may or may not be mutually exclusive and can interact with each other. The degrees of these interactions can be found in this correlation matrix heatmap of the different Delay Types.</p>
+        <figure>
+            <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/88552e64-585a-4b83-8205-e9a1346a1932/15d4fbff-abc3-48a2-967d-9ce07c5964e6/Untitled.png" alt="Correlation matrix heatmap of different Delay Types">
+            <figcaption>We can see that Departure Delay (Minutes) has the following correlations:</figcaption>
+        </figure>
+        <ul>
+            <li>A strong positive correlation with <strong>Delay Carrier (Minutes)</strong> (0.68), suggesting that when there is a carrier delay, it's likely that the departure delay increases.</li>
+            <li>A weak positive correlation with <strong>Delay Weather (Minutes)</strong> (0.26), implying that weather delays have a slight impact on increasing departure delays.</li>
+            <li>A moderate positive correlation with <strong>Delay National Aviation System (Minutes)</strong> (0.33), indicating that delays attributed to the national aviation system have a moderate impact on departure delays.</li>
+            <li>A very weak correlation with <strong>Delay Security (Minutes)</strong> (0.04), which means security delays have almost no linear relationship with departure delays.</li>
+            <li>A moderate positive correlation with <strong>Delay Late Aircraft Arrival (Minutes)</strong> (0.49), suggesting that when there is a delay due to the late arrival of an aircraft, there tends to be a moderate increase in the departure delay.</li>
+        </ul>
 
 
-    <div>
-        <tableau-viz id="tableauViz"       
-        src='https://public.tableau.com/views/2015_US_Flight_Delays_Dashboard/DASHflight_delays_2015?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
-        toolbar="hidden" hide-tabs height=800px"
-           
-       </tableau-viz>
-    
-    </div>
+            <h2>Areas of Focus</h2>
+            <p>In the years before COVID, Alaska Airlines grew rapidly out of their homebase of Seattle-Tacoma International Airport. This hasn’t been without its challenges. Unfortunately, Carrier Delays have steadily increased and continue to trend upward.</p>
+            <figure>
+                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/88552e64-585a-4b83-8205-e9a1346a1932/e1685835-99c2-4b19-8599-f5f71cb32c42/Increase_in_Flights_and_Carrier_Delays_Over_Time.jpg" alt="Graph showing the increase in flights and carrier delays over time">
+                <figcaption>Graph illustrating the increase in flights and carrier delays over time.</figcaption>
+            </figure>
+            <p>Understanding more about Carrier Delays is the focus of this analysis.</p>
 
-<!-- Across Specific Airplanes-->
-    <div>
-    <tableau-viz       
-    src='https://public.tableau.com/views/2015-ComparisonofAirlineandWeather-RelatedDelaysAcrossDifferentAirlines/DashDelayByAirline?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
-    toolbar="hidden" hide-tabs height=800px"
-       
-   </tableau-viz>
-</div>
+            <h3>Alaska Airlines Fleet</h3>
+            <p>Intuitively it makes sense that assessing the airplanes themselves is a great place to investigate first when assessing carrier delays as mechanical problems are a primary cause of carrier delays.</p>
+            <p>There are two main manufacturers Alaska Airlines has used planes from in the past decade: Boeing and Airbus. Over time, the fleet composition has become more centered on Boeing.</p>
+   
+            <!-- Original Dashboard -->
+            <div>
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/AlaskaAirlinesFleetComposition/AgingFleet?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link'
+                toolbar="hidden" hide-tabs height=800px>
+            </div>
 
-<!-- Across Specific Airplanes-->
-<div>
-    <tableau-viz       
-    src='https://public.tableau.com/views/2015-ComparisonofAirlineModelsWaitTimesforAirlineDelay/DASHDelayByAircraft?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
-    toolbar="hidden" hide-tabs height=800px"
-       
-   </tableau-viz>
-</div>
+            Based on Carrier Delays, this was a wise decision as we can see in this plot.<br>
+                        <!-- Relationship between Age + Carrier Delay Across All Years -->
+                        <div>
+                            <tableau-viz id="tableauViz"       
+                            src='https://public.tableau.com/views/RelationshipBetweenAircraftAgeandCarrierDelay-AcrossAllYears/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link'
+                            toolbar="hidden" hide-tabs height=800px>
+                        </div>
 
-<!-- Across Destinations -->
-<div>
-    <tableau-viz       
-    src='https://public.tableau.com/views/2015-ComparisonofAirlineModelUniqueDestinationsServed/DASHDestination?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
-    toolbar="hidden" hide-tabs height=800px"
-       
-   </tableau-viz>
-</div>
+            <h3>Day of the Week</h3>
+
+            <h3>Time of Day</h3>
+            When we examine how the timing of a flight correlates with delays, taking into account various years and destination airports, we observe significant variability.
+
+                       <!-- Relationship between Age + Carrier Delay Across All Years -->
+                       <div>
+                        <tableau-viz id="tableauViz"       
+                        src='https://public.tableau.com/views/ofFlightsthatExperiencedaCarrierDelaybyScheduledDepartureTime/ofFlightsthatExperiencedaCarrierDelaybyScheduledDepartureTime?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link'
+                        toolbar="hidden" hide-tabs height=800px>
+                    </div>
+
+            <h3>Seasonality</h3>
+
 
    <br>
 
@@ -851,21 +887,36 @@
   <li><strong>Deriving Analytical Insights</strong>: Tableau played a critical role in converting complex datasets into clear, actionable insights. Its sophisticated analytical tools allowed for the extraction of significant patterns, aiding in the comprehensive understanding of the factors contributing to airline delays.</li>
 </ul>
 
+<h2><strong>Additional Visualizations</strong></h2>
 
-    <script>
-        function toggleInfo(id) {
-            var info = document.getElementById(id);
-            if (info.style.maxHeight) {
-                info.style.maxHeight = null;
-                setTimeout(function () {
-                    info.style.display = "none";
-                }, 500); // This should match the CSS transition time
-            } else {
-                info.style.display = "block";
-                info.style.maxHeight = info.scrollHeight + "px";
-            }
-        }
-    </script>
+<!-- Original Dashboard -->
+     <div>
+        <tableau-viz id="tableauViz"       
+        src='https://public.tableau.com/views/2015_US_Flight_Delays_Dashboard/DASHflight_delays_2015?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
+        toolbar="hidden" hide-tabs height=800px>
+    </div>
+
+<!-- Across Specific Airplanes -->
+    <div>
+    <tableau-viz src='https://public.tableau.com/views/2015-ComparisonofAirlineandWeather-RelatedDelaysAcrossDifferentAirlines/DashDelayByAirline?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
+    toolbar="hidden" hide-tabs height=800px></tableau-viz>
+       
+    </div>
+
+<!-- Across Specific Airplanes-->
+<div>
+    <tableau-viz src='https://public.tableau.com/views/2015-ComparisonofAirlineModelsWaitTimesforAirlineDelay/DASHDelayByAircraft?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
+    toolbar="hidden" hide-tabs height=800px></tableau-viz>
+</div>
+
+<!-- Across Destinations -->
+<div>
+    <tableau-viz src='https://public.tableau.com/views/2015-ComparisonofAirlineModelUniqueDestinationsServed/DASHDestination?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'
+    toolbar="hidden" hide-tabs height=800px></tableau-viz>
+       
+   </tableau-viz>
+</div>
+
 
 </body>
 

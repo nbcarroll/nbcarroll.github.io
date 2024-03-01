@@ -889,7 +889,7 @@
     </ul>
 </section>
    <h2 id="tools">Tools Used</h2>
-   <h3><strong>Python for Data Preprocessing</strong></h3>
+   <h3><strong>I. Python for Initial Data Preprocessing</strong></h3>
    <div class="tools-box">
     🛠️ The Jupyter Notebooks can be found <a href="https://github.com/nbcarroll/nbcarroll.github.io/tree/master/airline_delay_analysis/Python%20Files">here</a>.</div><br>
 <ul>
@@ -898,7 +898,7 @@
   <li><strong>Preparing Data for SQL Database</strong>: Post-cleaning, Python scripts were used to restructure the data into a format suitable for SQL database integration. This transformation was key to ensuring that the data was stored in an organized, accessible manner.</li>
 </ul>
 
-<h3><strong>SQL Database for Data Storage</strong></h3>
+<h3><strong>II. Creating a SQL Database for Data Storage</strong></h3>
 
 <button onclick="toggleContent('contentToToggle')">Show Entity-Relationship Diagram</button> <br><br>
 
@@ -910,8 +910,6 @@
 
   <li><strong>Efficient Data Handling</strong>: The SQL database was pivotal for effective data management, facilitating advanced querying, systematic updating, and efficient retrieval of diverse datasets for analysis.</li>
 </ul>
-
-<h3><strong>Tableau for Data Analysis and Visualization</strong></h3>
 
 <p>
     This SQL query is instrumental in correlating flight details from Alaska Airlines' departures at Sea-Tac from 2015 to 2023 with specific aircraft registration data, ensuring the aircraft's registration was valid at the time of the flight and that the flight occurred after the aircraft's certification. By linking to processed aircraft model details, we can gain insights into the aircraft models in use, facilitating a deeper analysis of potential factors influencing carrier delays.</p>
@@ -938,13 +936,22 @@
     ON ar.AircraftMFRModelCode = pa.`MFR_MDL_CODE`
         </code></pre>
 </p>
+
+<h3><strong>III. Tableau Prep for Additional Processing</strong></h3>
+
+
 <p>
 
-    After integrating the initial data, I proceeded with further cleaning, such as converting specific columns to appropriate data types for better analysis. I then conducted inner joins on airline and airport tables to merge the data effectively.
+    After integrating the initial data via the above SQL query, I proceeded with further cleaning, such as converting specific columns to appropriate data types for better analysis. I then conducted inner joins on airline and airport tables to merge the data effectively.
 
     Next, I created a .hyper file, a Tableau-specific high-performance data file designed for optimal data query and storage efficiency. This file forms the basis of my Tableau dashboards and visualizations, enabling in-depth and interactive data exploration.
 
+    <h3><strong>IV. Tableau  for Data Analysis and Visualization</strong></h3>
 
+
+    <p>
+
+        Finally Data was imported into Tableau to create visuals. Many calculated fields were used at this phase. For example, I created a calculated field to convert the 'Scheduled Departure Time' to a time of day (morning, afternoon, evening, or night) to better understand how the time of day impacts carrier delays. I also created a calculated field to convert the 'Date' to a day of the week to understand how the day of the week impacts carrier delays. 
 </p>
 <!-- <ul> -->
   <!-- <li><strong>Seamless Data Integration</strong>: The prepared data, stored in the SQL database, was seamlessly integrated into Tableau. This integration enabled a fluid transfer of information from the storage database to the visualization platform.</li> -->

@@ -669,6 +669,23 @@
         overflow: hidden;
         display: none; /* Initially hidden */
     }
+
+    /* Navigiation Bar */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #007BFF;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
 	    
     </style>
 
@@ -761,11 +778,25 @@
 
 <h1>Analysis of Alaska Airlines Carrier Delays at Seattle-Tacoma International Airport</h1>
 
+<nav aria-label="Main navigation">
+    <ul>
+  
+        <li><a href="#objective">Objective</a></li>
+        <li><a href="#areas-of-focus">Areas of Focus</a></li>
+        <li><a href="#data-sources">Data Collection & Preperation</a></li>
+    </ul>
+</nav>
+
+
+
+
     <h2>Background</h2>
     <p>Seattle-Tacoma International Airport, colloquially known as Sea-Tac, is a pivotal hub in the aviation network of the Pacific Northwest and plays a critical role in the global air transport infrastructure. As the primary commercial airport serving Seattle and Tacoma, it is an essential gateway for both passenger and cargo traffic. Its strategic location, coupled with a robust array of domestic and international flights, positions Sea-Tac as a vital nexus connecting various global destinations.</p>
     <p>For Alaska Airlines, Seattle-Tacoma International Airport is more than just a significant hub; it is the heart of its operations. As the largest carrier operating out of Sea-Tac, Alaska Airlines has a substantial portion of its fleet and flights concentrated here. The airport serves as the primary base for its extensive network of routes, especially those connecting major cities across the United States, and plays a crucial role in Alaska Airlines' growth strategy and market presence. The efficiency and functionality of Sea-Tac directly impact Alaska Airlines' operational success, customer satisfaction, and competitive standing in the airline industry.</p>
  
+    <section id="objective">
         <h2>Objective</h2>
+        
         <aside>
             <p>💡 The objective of this study is to conduct an in-depth analysis of airline delays at Seattle-Tacoma International Airport, <strong>with a particular focus on understanding the patterns and root causes of Carrier delays</strong>, which includes delays due to maintenance or mechanical problems, crew problems (like delays in crew scheduling), cleaning, fueling, etc. </p>
             Carrier Delays are directly within the control of the airline. These are not related to weather, air traffic control, or other factors outside the airline's control.
@@ -790,6 +821,10 @@
             <li>A very weak correlation with <strong>Delay Security (Minutes)</strong> (0.04), which means security delays have almost no linear relationship with departure delays.</li>
             <li>A moderate positive correlation with <strong>Delay Late Aircraft Arrival (Minutes)</strong> (0.49), suggesting that when there is a delay due to the late arrival of an aircraft, there tends to be a moderate increase in the departure delay.</li>
         </ul> -->
+    </section>
+
+    <section id="area-of-focus">
+
             <h2>Areas of Focus</h2>
             <p>In the years before COVID, Alaska Airlines grew rapidly out of their homebase of Seattle-Tacoma International Airport. This hasn’t been without its challenges. Unfortunately, Carrier Delays have steadily increased and continue to trend upward.</p>
 
@@ -827,6 +862,7 @@
 
             <h3>Time of Day</h3>
             When we examine how the timing of a flight correlates with delays, taking into account various years and destination airports, we observe significant variability.
+    <br>
 
 
     <br>
@@ -834,7 +870,52 @@
             <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/airline_delay_analysis/static_viz/Average%20Carrier%20Delay%20Time%20by%20MonthAmong%20Flights%20Which%20Experienced%20a%20Carrier%20Delay.jpg?raw=true"class="wrap-image">
             
    <br>
+   </section>
 
+
+   <section id="data-sources">
+    <h1>Data Collection and Preparation</h1>
+
+    <h2>Data Sources</h2>
+    <p>This analysis leverages three primary data sources, each offering unique insights into different aspects of air travel and aircraft operations.</p>
+    
+    <h3>Flight Departures Statistics from the Department of Transportation</h3>
+    <p><a href="https://www.transtats.bts.gov/ontime/Departures.aspx">This dataset</a> offers extensive statistics on flight departures. It encompasses a wide array of fields critical for analyzing delays, including:</p>
+    <ul>
+        <li><strong>Carrier Code</strong>: Identifier for the airline operating the flight.</li>
+        <li><strong>Date (MM/DD/YYYY)</strong>: The date of the flight.</li>
+        <li><strong>Flight Number</strong>: The specific flight number.</li>
+        <li><strong>Tail Number</strong>: The aircraft's unique registration number.</li>
+        <li><strong>Destination Airport</strong>: The intended destination airport code.</li>
+        <li><strong>Scheduled Elapsed Time (Minutes)</strong>: The planned duration of the flight.</li>
+        <li><strong>Delay Carrier (Minutes)</strong>: Delays attributed to the carrier.</li>
+        <li><strong>Delay Weather (Minutes)</strong>: Delays caused by weather conditions.</li>
+        <li><strong>Delay National Aviation System (Minutes)</strong>: Delays related to the national aviation system's operations.</li>
+        <li><strong>Delay Security (Minutes)</strong>: Delays due to security issues.</li>
+        <li><strong>Delay Late Aircraft Arrival (Minutes)</strong>: Delays resulting from the late arrival of the aircraft.</li>
+    </ul>
+    
+    <h3>Releasable Aircraft Database from the FAA</h3>
+    <p>Available directly from the <a href="https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download">FAA's official website</a>, this comprehensive database includes several key files that detail aircraft registration and specifications:</p>
+    <ul>
+        <li><strong>Aircraft Registration Master File</strong>: Lists all registered aircraft.</li>
+        <li><strong>Aircraft Dealer Applicant File</strong>: Information on aircraft dealer applications.</li>
+        <li><strong>Aircraft Document Index File</strong>: Index of documents related to aircraft.</li>
+        <li><strong>Aircraft Reference File by Make/Model/Series Sequence</strong>: Detailed make and model information.</li>
+        <li><strong>Deregistered Aircraft File</strong>: Records of deregistered aircraft.</li>
+        <li><strong>Engine Reference File</strong>: Specifications and information on aircraft engines.</li>
+        <li><strong>Reserve N-Number File</strong>: List of reserved N-Numbers for aircraft.</li>
+    </ul>
+    
+    <h3>The Global Airport Database (GADB)</h3>
+    <p><a href="https://www.partow.net/miscellaneous/airportdatabase/">The GADB</a> is a freely available database encompassing over 9,300 airports worldwide, from major international hubs to smaller regional airports. It provides comprehensive details such as:</p>
+    <ul>
+        <li><strong>IATA Code</strong>: The International Air Transport Association code.</li>
+        <li><strong>Name</strong>: The official name of the airport.</li>
+        <li><strong>Country</strong>: The country where the airport is located.</li>
+        <li><strong>City</strong>: The city nearest to the airport.</li>
+        <li><strong>Latitude-Longitude Position</strong>: Geographical coordinates of the airport.</li>
+    </ul>
    <h2>Tools Used</h2>
    <h3><strong>Python for Data Preprocessing</strong></h3>
    <div class="tools-box">
@@ -887,7 +968,7 @@
 </ul>
 
 <h2><strong>Additional Visualizations</strong></h2>
-
+<p>Note these dashboards/visuals were made in the process of making this project. </p>
 <!-- Original Dashboard -->
      <div>
         <tableau-viz id="tableauViz"       

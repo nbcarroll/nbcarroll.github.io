@@ -826,12 +826,20 @@
                         </div>
 
 
-            <h3>Day of the Week</h3>
-
-            <h3>Time of Day</h3>
+            <h3>Time & Day</h3>
             When we examine how the timing of a flight correlates with delays, taking into account various years and destination airports, we observe significant variability.
+            <br>
 
+            <tableau-viz id="tableauViz"       
+            src='https://public.tableau.com/views/CarrierDelaysbyTimeDayoftheWeek/DayTime?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link'
+            toolbar="hidden" hide-tabs>
 
+            <!-- Time of Day Dashboard -->
+            <div>
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/ofFlightsThatExperiencedaCarrierDelaybyScheduledDepartureTime/ofFlightsthatExperiencedaCarrierDelaybyScheduledDepartureTime?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link'
+                toolbar="hidden" hide-tabs height=800px>
+            </div>
     <br>
             <h3>Seasonality</h3>
             <img src="https://github.com/nbcarroll/nbcarroll.github.io/blob/master/airline_delay_analysis/static_viz/Average%20Carrier%20Delay%20Time%20by%20MonthAmong%20Flights%20Which%20Experienced%20a%20Carrier%20Delay.jpg?raw=true"class="wrap-image">
@@ -901,30 +909,44 @@
 
   <li><strong>Efficient Data Handling</strong>: The SQL database was pivotal for effective data management, facilitating advanced querying, systematic updating, and efficient retrieval of diverse datasets for analysis.</li>
 </ul>
-<pre style="background-color:#ffffff;color:#13ff46;"><code>SELECT
-    aa.*,
-    ar.`Name`,
-    ar.`Year mfr`,
-    ar.`CertIssueDate`,
-    ar.`LastActivityDate`,
-    ar.`Expiration Date`,
-    pa.*
-FROM (
-    SELECT *,
-        SUBSTRING(`Tail Number`, 2) AS `Tail_Number_Extract` -- 'Tail Number' starts with an N, so this gets rid of that
-    FROM alaska_air_seatac_departure_2015_to_2023
-) AS aa
-LEFT JOIN aircraft_registration_2015 ar
-ON aa.`Tail_Number_Extract` = ar.`N_Number`
-AND DATE(ar.`Expiration Date`) > STR_TO_DATE(aa.`Date` (MM/DD/YYYY), '%m/%d/%Y') -- Aircraft Registration Does Not Expire before the flight date
-AND STR_TO_DATE(aa.`Date` (MM/DD/YYYY), '%m/%d/%Y') > DATE(ar.`CertIssueDate`) -- Flight Date is after the Aircraft has been Certified
-JOIN `processed_aircraft_registration_model_details_2015` pa
-ON ar.AircraftMFRModelCode = pa.`MFR_MDL_CODE`
-    </code></pre>
+
 <h3><strong>Tableau for Data Analysis and Visualization</strong></h3>
 
-<ul>
-  <li><strong>Seamless Data Integration</strong>: The prepared data, stored in the SQL database, was seamlessly integrated into Tableau. This integration enabled a fluid transfer of information from the storage database to the visualization platform.</li>
+<p>
+    This SQL query is instrumental in correlating flight details from Alaska Airlines' departures at Sea-Tac from 2015 to 2023 with specific aircraft registration data, ensuring the aircraft's registration was valid at the time of the flight and that the flight occurred after the aircraft's certification. By linking to processed aircraft model details, we can gain insights into the aircraft models in use, facilitating a deeper analysis of potential factors influencing carrier delays.</p>
+
+    <pre style="background-color: #0a0a0a; color: #05eb6d; border: 1px solid #ccc; padding: 10px; border-radius: 4px; overflow: auto;">
+        <code>SELECT
+        aa.*,
+        ar.`Name`,
+        ar.`Year mfr`,
+        ar.`CertIssueDate`,
+        ar.`LastActivityDate`,
+        ar.`Expiration Date`,
+        pa.*
+    FROM (
+        SELECT *,
+            SUBSTRING(`Tail Number`, 2) AS `Tail_Number_Extract` -- 'Tail Number' starts with an N, so this gets rid of that
+        FROM alaska_air_seatac_departure_2015_to_2023
+    ) AS aa
+    LEFT JOIN aircraft_registration_2015 ar
+    ON aa.`Tail_Number_Extract` = ar.`N_Number`
+    AND DATE(ar.`Expiration Date`) > STR_TO_DATE(aa.`Date` (MM/DD/YYYY), '%m/%d/%Y') -- Aircraft Registration Does Not Expire before the flight date
+    AND STR_TO_DATE(aa.`Date` (MM/DD/YYYY), '%m/%d/%Y') > DATE(ar.`CertIssueDate`) -- Flight Date is after the Aircraft has been Certified
+    JOIN `processed_aircraft_registration_model_details_2015` pa
+    ON ar.AircraftMFRModelCode = pa.`MFR_MDL_CODE`
+        </code></pre>
+</p>
+<p>
+
+    After integrating the initial data, I proceeded with further cleaning, such as converting specific columns to appropriate data types for better analysis. I then conducted inner joins on airline and airport tables to merge the data effectively.
+
+    Next, I created a .hyper file, a Tableau-specific high-performance data file designed for optimal data query and storage efficiency. This file forms the basis of my Tableau dashboards and visualizations, enabling in-depth and interactive data exploration.
+
+
+</p>
+<!-- <ul> -->
+  <!-- <li><strong>Seamless Data Integration</strong>: The prepared data, stored in the SQL database, was seamlessly integrated into Tableau. This integration enabled a fluid transfer of information from the storage database to the visualization platform.</li> -->
 
 <!-- 
 
@@ -945,9 +967,9 @@ ON ar.AircraftMFRModelCode = pa.`MFR_MDL_CODE`
   </li>
 </ol> -->
 
-  <li><strong>Interactive Dashboard Creation</strong>: Utilizing Tableau's dynamic visualization capabilities, an interactive dashboard was developed. This dashboard served as a central tool for visual data exploration, enabling the analysis of complex patterns and trends in airline delays.</li>
+  <!-- <li><strong>Interactive Dashboard Creation</strong>: Utilizing Tableau's dynamic visualization capabilities, an interactive dashboard was developed. This dashboard served as a central tool for visual data exploration, enabling the analysis of complex patterns and trends in airline delays.</li>
   <li><strong>Deriving Analytical Insights</strong>: Tableau played a critical role in converting complex datasets into clear, actionable insights. Its sophisticated analytical tools allowed for the extraction of significant patterns, aiding in the comprehensive understanding of the factors contributing to airline delays.</li>
-</ul>
+</ul> -->
 
 <h2><strong>Additional Visualizations</strong></h2>
 
